@@ -1,0 +1,64 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Web-based Symtyper}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Brief Overview}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Clades View}{5}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Subtypes View}{5}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Multiples View}{6}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Trees View}{6}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Breakdown View}{7}{subsection.1.1.5}
+\contentsline {chapter}{\numberline {2}Command Line Symtyper}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Installing Symtyper's requirements}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Runnign Symtyper sub-program}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}clade}{9}{subsection.2.2.1}
+\contentsline {subsubsection}{usage}{9}{subsubsection*.3}
+\contentsline {subsubsection}{Input}{9}{subsubsection*.4}
+\contentsline {subsubsection}{Ouptut}{10}{subsubsection*.5}
+\contentsline {subsection}{\numberline {2.2.2}subtype}{10}{subsection.2.2.2}
+\contentsline {subsubsection}{Input}{10}{subsubsection*.6}
+\contentsline {subsubsection}{Output}{10}{subsubsection*.7}
+\contentsline {subsection}{\numberline {2.2.3}resolveMultipleHits}{10}{subsection.2.2.3}
+\contentsline {subsubsection}{Input}{10}{subsubsection*.8}
+\contentsline {subsubsection}{Output}{10}{subsubsection*.9}
+\contentsline {subsection}{\numberline {2.2.4}builPlacementTree}{11}{subsection.2.2.4}
+\contentsline {subsubsection}{Input}{11}{subsubsection*.10}
+\contentsline {subsubsection}{Output}{11}{subsubsection*.11}
+\contentsline {subsection}{\numberline {2.2.5}makeBiome}{11}{subsection.2.2.5}
+\contentsline {subsubsection}{Input}{11}{subsubsection*.12}
+\contentsline {subsubsection}{Output}{11}{subsubsection*.13}
+\contentsline {chapter}{\numberline {3}SymTyper's Concepts}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Definitions}{13}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}HIT}{13}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}NOHIT}{13}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}AMBIGUOUS}{13}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Perfect}{13}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Unique}{13}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}New}{13}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}ShortNew}{14}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.8}Multiples}{14}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.9}Short}{14}{subsection.3.1.9}
+\contentsline {subsection}{\numberline {3.1.10}Dynamic Similarity}{14}{subsection.3.1.10}
+\contentsline {subsection}{\numberline {3.1.11}Ambiguous Hit Correction}{14}{subsection.3.1.11}
+\contentsline {subsection}{\numberline {3.1.12}Resolved}{15}{subsection.3.1.12}
+\contentsline {subsection}{\numberline {3.1.13}Most Recent Common Ancestor}{15}{subsection.3.1.13}
+\contentsline {subsection}{\numberline {3.1.14}Placement Tree}{15}{subsection.3.1.14}
+\contentsline {subsection}{\numberline {3.1.15}TSV Format}{15}{subsection.3.1.15}
+\contentsline {subsection}{\numberline {3.1.16}Samples File}{15}{subsection.3.1.16}
+\contentsline {section}{\numberline {3.2}Input File Formats}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Fasta Input Format}{15}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Clade Output Format}{15}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}HITS OUTPUT}{15}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}NOHITS OUTPUT}{16}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}AMBIGUOUS OUTPUT}{16}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}LOWOUT}{16}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}MULTIPLE OUTPUT}{16}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Subtype Output Formats}{16}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}NEWOUT}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}PERFECT OUTPUT}{16}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}SHORT OUTPUT}{17}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}SHORTNEW OUTPUT}{17}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}UNIQUE OUTPUT}{17}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}ResolveMultipleHits Output Formats}{17}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Corrected Output All Clade}{17}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Resolved Output All Clades}{17}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Corrected Output Per Clade}{17}{subsection.3.5.3}
+\contentsline {chapter}{\numberline {4}Indices and tables}{19}{chapter.4}

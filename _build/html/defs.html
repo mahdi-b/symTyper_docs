@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SymTyper’s Concepts &mdash; Symtyper_docs 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Symtyper_docs 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Command Line Symtyper" href="CommanLine.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CommanLine.html" title="Command Line Symtyper"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Symtyper_docs 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="symtyper-s-concepts">
+<h1>SymTyper&#8217;s Concepts<a class="headerlink" href="#symtyper-s-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hit">
+<span id="hits"></span><h3>HIT<a class="headerlink" href="#hit" title="Permalink to this headline">¶</a></h3>
+<p>This is a clade-relevant definition. To be a HIT against a clade reference sequence, a query need to unambiguously align with a defined similarity over a defined percentage of its length.
+Furthermore, the e-value of the first hit needs to be at least K orders of magnitude larger than that of an alternative clade.</p>
+</div>
+<div class="section" id="nohit">
+<span id="nohits"></span><h3>NOHIT<a class="headerlink" href="#nohit" title="Permalink to this headline">¶</a></h3>
+<p>This is a clade-relevant definition. A Sequence is considered a NOHIT if it does not have any satisfactory alignments against a calde.</p>
+</div>
+<div class="section" id="ambiguous">
+<span id="id1"></span><h3>AMBIGUOUS<a class="headerlink" href="#ambiguous" title="Permalink to this headline">¶</a></h3>
+<p>This is a clade-relevant definition. Is a sequence</p>
+</div>
+<div class="section" id="perfect">
+<span id="id2"></span><h3>Perfect<a class="headerlink" href="#perfect" title="Permalink to this headline">¶</a></h3>
+<p>This is a subtype-relevant definition. Perfect refers to a query
+sequence that aligns unambiguously to one sequence in the reference
+database (e.g., 100% similarity to 100% of the length of the target)
+for for which the best hit&#8217;s raw bit score is at least 3 orders of
+magnitude larger than the raw bit score for the second hit.</p>
+</div>
+<div class="section" id="unique">
+<span id="id3"></span><h3>Unique<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h3>
+<p>This is a subtype-relevant definition. Unique refers to a query sequence that aligns to a single reference in
+the database with a user-defined (e.g., ≥ user defined % similarity
+to 100% target length) for which the best hit&#8217;s raw bit score is at
+least 3 orders of magnitude larger than the raw bit score for the
+second hit.</p>
+</div>
+<div class="section" id="new">
+<span id="id4"></span><h3>New<a class="headerlink" href="#new" title="Permalink to this headline">¶</a></h3>
+<p>This is a subtype-relevant definition. A New subtype applies to a sequnence with no significant hit to any of the subtype database sequences.</p>
+</div>
+<div class="section" id="shortnew">
+<span id="id5"></span><h3>ShortNew<a class="headerlink" href="#shortnew" title="Permalink to this headline">¶</a></h3>
+<p>This is a subtype-relevant definition. ShortNew refers to a query sequence that aligns with high similarity to
+a unique reference sequence according to the dynamic similarity
+threshold (Equation 1: <a class="reference internal" href="#dynamic-similarity"><em>Dynamic Similarity</em></a>) below;</p>
+</div>
+<div class="section" id="multiples">
+<span id="id6"></span><h3>Multiples<a class="headerlink" href="#multiples" title="Permalink to this headline">¶</a></h3>
+<p>This is a subtype-relevant definition. A query sequence of type multiple is a sequence that aligns with equal similarity to multiple subtypes  sequences.</p>
+</div>
+<div class="section" id="short">
+<span id="id7"></span><h3>Short<a class="headerlink" href="#short" title="Permalink to this headline">¶</a></h3>
+<p>This is a subtype-relevant definition. A query of type short, is one does not meet minimum similarity and length requirements (e.g., &lt;90% similarity to &lt;90% of the length of the target).</p>
+</div>
+<div class="section" id="dynamic-similarity">
+<span id="id8"></span><h3>Dynamic Similarity<a class="headerlink" href="#dynamic-similarity" title="Permalink to this headline">¶</a></h3>
+<p>The dynamic similarity threshold is computed to allow query sequences
+that are shorter than the database references to be considered as potential
+hits. However, the shorter the sequnces, the higher the required stringency.
+The dynamic similarity threshold is computed as:</p>
+<p><span class="math">\(requird\_similarity = 100 - \frac{C - min_c}{1-min_c} * (100 - min_s)\)</span></p>
+<p>where:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>C</td>
+<td>is the coverage fraction of the query over the hit sequences</td>
+</tr>
+<tr class="row-even"><td><span class="math">\(min_c\)</span></td>
+<td>is the minimum accepted coverage fraction of the query and the hit sequences</td>
+</tr>
+<tr class="row-odd"><td><span class="math">\(min_s\)</span></td>
+<td>is the minimum similarity threshold between the query and the hit sequences</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ambiguous-hit-correction">
+<span id="multiple-hits"></span><h3>Ambiguous Hit Correction<a class="headerlink" href="#ambiguous-hit-correction" title="Permalink to this headline">¶</a></h3>
+<p>An ambiguous hit occrs when a sequences aligns with multiple subtypes. To try to infer the correct subtype of
+the sequence, we employ a strategy similar to the wisdom of the crowd, and allow similar sequences to help contribute
+information about the closest subtype of the sequence. To do so, ambiguous sequences are clustered using high stringency
+and a subtype distribution (or spectrum) is computed for each cluster.</p>
+<p>Suppose a cluster has a distribution:
+88 C1.1, 45 C1.18, 6 C1.21 and 2 C1.28. This means that at least 88 sequences in the cluster were subtyped as C1.1. and only 1
+was subtyped as C1.28.</p>
+<p>Clusters&#8217; distributions are usually highly skewed with few high
+frequency subtypes and a greater number of low frequency types.  Since
+there distributions are subsequently used to infer the <a class="reference internal" href="#mrca"><em>Most Recent Common Ancestor</em></a>
+(MRCA) sequence as a proxy, it is very improtant to rid the data of
+unlikely subtype that can bias the computation of the MRCA. For the
+previous distribution, the wisdom of the crowd tells us that this
+cluster of sequences is closest to C1.1. and unlikely to be C1.28 and
+therfore drops it for the C1.28. The same can be said about C1.21
+since only 6 sequences have been aligned to it.  The corrected
+distribution is thus likely 88 C1.1, 45 C1.18. This distribution will
+be subsequently used to map the reads to the common ancestor in the
+phylogeny.</p>
+<p>The algoirthm used to correct the subtypes distribution uses a similar
+approach by formalizing which subtypes to drop for the distribution
+using a strigency parameter p. To do so, we iteratively drop the
+the subtypes that have counts within the <span class="math">\(p^{th}\)</span> percentile of the distribution and stop
+when no subtypes can be dropped.</p>
+</div>
+<div class="section" id="resolved">
+<span id="id9"></span><h3>Resolved<a class="headerlink" href="#resolved" title="Permalink to this headline">¶</a></h3>
+<p>An ambiguous read is said to be resolved if its filtered distribution after the <a class="reference internal" href="#multiple-hits"><em>Ambiguous Hit Correction</em></a> contains a single subtype.</p>
+</div>
+<div class="section" id="most-recent-common-ancestor">
+<span id="mrca"></span><h3>Most Recent Common Ancestor<a class="headerlink" href="#most-recent-common-ancestor" title="Permalink to this headline">¶</a></h3>
+<p>In a phylogenetic tree, an internal node, <span class="math">\(N\)</span>, is the most recent commot recent ancestor of a set of leaves <span class="math">\(L\)</span>, if <span class="math">\(N\)</span> is the first common parent
+of all the leaves of in <span class="math">\(L\)</span></p>
+</div>
+<div class="section" id="placement-tree">
+<h3>Placement Tree<a class="headerlink" href="#placement-tree" title="Permalink to this headline">¶</a></h3>
+<p>A phylogeny of the subtypes in each clade where an internal node can be labeled using the number of seqeuencing reads for which is considered to be the most recent ancestor</p>
+</div>
+<div class="section" id="tsv-format">
+<span id="tsv"></span><h3>TSV Format<a class="headerlink" href="#tsv-format" title="Permalink to this headline">¶</a></h3>
+<p>A file with tab delimited columns</p>
+</div>
+<div class="section" id="samples-file">
+<span id="samplefile"></span><h3>Samples File<a class="headerlink" href="#samples-file" title="Permalink to this headline">¶</a></h3>
+<p>A file cotaining the sample, one per lane in the dataset.</p>
+</div>
+</div>
+<div class="section" id="input-file-formats">
+<h2>Input File Formats<a class="headerlink" href="#input-file-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fasta-input-format">
+<span id="inputformat"></span><h3>Fasta Input Format<a class="headerlink" href="#fasta-input-format" title="Permalink to this headline">¶</a></h3>
+<p>Sequence ids in the fasta file are required to have the following format.</p>
+<p><strong>Sample_ID::Seq_Number</strong></p>
+<ul class="simple">
+<li><strong>Sample_ID</strong>: refers to the sample to which the sequence belongs. The sampleID should be present in the <a class="reference internal" href="#samplefile"><em>Samples File</em></a></li>
+<li><strong>Seq_Number</strong>: is a unique identifier for a the sequence.</li>
+</ul>
+<p>Note that the two colons (<strong>::</strong>) are used to separate the Sample_ID and the Seq_Number.</p>
+</div>
+</div>
+<div class="section" id="clade-output-format">
+<h2>Clade Output Format<a class="headerlink" href="#clade-output-format" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hits-output">
+<span id="hitsout"></span><h3>HITS OUTPUT<a class="headerlink" href="#hits-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>Hit start in query</li>
+<li>Hit end in query</li>
+<li>First hit id</li>
+<li>Second hit id</li>
+<li>First hit e-value</li>
+<li>Second hit e-value</li>
+</ul>
+</div>
+<div class="section" id="nohits-output">
+<span id="nohitsout"></span><h3>NOHITS OUTPUT<a class="headerlink" href="#nohits-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+</ul>
+</div>
+<div class="section" id="ambiguous-output">
+<span id="ambiguousout"></span><h3>AMBIGUOUS OUTPUT<a class="headerlink" href="#ambiguous-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>First hit id</li>
+<li>Second hit id</li>
+<li>First hit e-value</li>
+<li>Second hit e-value</li>
+</ul>
+</div>
+<div class="section" id="lowout">
+<span id="id10"></span><h3>LOWOUT<a class="headerlink" href="#lowout" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>First hit id</li>
+<li>Hit e-value</li>
+</ul>
+</div>
+<div class="section" id="multiple-output">
+<span id="multipleout"></span><h3>MULTIPLE OUTPUT<a class="headerlink" href="#multiple-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>List of hits ids</li>
+</ul>
+</div>
+</div>
+<div class="section" id="subtype-output-formats">
+<h2>Subtype Output Formats<a class="headerlink" href="#subtype-output-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="newout">
+<span id="id11"></span><h3>NEWOUT<a class="headerlink" href="#newout" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+</ul>
+</div>
+<div class="section" id="perfect-output">
+<span id="perfectout"></span><h3>PERFECT OUTPUT<a class="headerlink" href="#perfect-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>Best hit id</li>
+<li>Query length / Hit length</li>
+<li>Percent identity</li>
+</ul>
+</div>
+<div class="section" id="short-output">
+<span id="shortout"></span><h3>SHORT OUTPUT<a class="headerlink" href="#short-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>Query length</li>
+<li>Best hit id</li>
+<li>Best hit lenght</li>
+</ul>
+</div>
+<div class="section" id="shortnew-output">
+<span id="shortnewout"></span><h3>SHORTNEW OUTPUT<a class="headerlink" href="#shortnew-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>Best hit id</li>
+<li>Query length / Hit length</li>
+<li>Percent identity</li>
+</ul>
+</div>
+<div class="section" id="unique-output">
+<span id="uniqueout"></span><h3>UNIQUE OUTPUT<a class="headerlink" href="#unique-output" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Query sequence id</li>
+<li>Best hit id</li>
+</ul>
+</div>
+</div>
+<div class="section" id="resolvemultiplehits-output-formats">
+<h2>ResolveMultipleHits Output Formats<a class="headerlink" href="#resolvemultiplehits-output-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="corrected-output-all-clade">
+<span id="correctedall"></span><h3>Corrected Output All Clade<a class="headerlink" href="#corrected-output-all-clade" title="Permalink to this headline">¶</a></h3>
+<p>tab separated fields and colon separated values. Ex.</p>
+<p><tt class="docutils literal"><span class="pre">Cluster:</span> <span class="pre">CL_415</span> <span class="pre">numSeq:</span> <span class="pre">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">clade:</span> <span class="pre">C</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">breakDown:180:4</span> <span class="pre">175M:2</span>&nbsp; <span class="pre">subtypes:</span> <span class="pre">C3.24_HE579012:</span> <span class="pre">6,</span> <span class="pre">C3k_AY589737:</span> <span class="pre">6,</span> <span class="pre">C3.23_HE579011:</span> <span class="pre">6</span></tt></p>
+<p>The previous line tell us that CL_145 representes 6 Sequences, 2 form sample 175M and 4 from sample 180. These sequences are in Clade C and have the subtype distribution listed in <cite>subtype</cite> list.</p>
+</div>
+<div class="section" id="resolved-output-all-clades">
+<span id="resolvedall"></span><h3>Resolved Output All Clades<a class="headerlink" href="#resolved-output-all-clades" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Cluster ID</li>
+<li>Number of sequences in the cluster</li>
+<li>Clade</li>
+<li>Subtype of sequences in the cluster</li>
+</ul>
+</div>
+<div class="section" id="corrected-output-per-clade">
+<span id="correctedperclade"></span><h3>Corrected Output Per Clade<a class="headerlink" href="#corrected-output-per-clade" title="Permalink to this headline">¶</a></h3>
+<p>This file fomat is similar to that in <a class="reference internal" href="#correctedall"><em>Corrected Output All Clade</em></a> execpt that the <cite>subtype</cite> list represents the corrected (or effective), rather than initial, subtypes</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SymTyper&#8217;s Concepts</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions</a><ul>
+<li><a class="reference internal" href="#hit">HIT</a></li>
+<li><a class="reference internal" href="#nohit">NOHIT</a></li>
+<li><a class="reference internal" href="#ambiguous">AMBIGUOUS</a></li>
+<li><a class="reference internal" href="#perfect">Perfect</a></li>
+<li><a class="reference internal" href="#unique">Unique</a></li>
+<li><a class="reference internal" href="#new">New</a></li>
+<li><a class="reference internal" href="#shortnew">ShortNew</a></li>
+<li><a class="reference internal" href="#multiples">Multiples</a></li>
+<li><a class="reference internal" href="#short">Short</a></li>
+<li><a class="reference internal" href="#dynamic-similarity">Dynamic Similarity</a></li>
+<li><a class="reference internal" href="#ambiguous-hit-correction">Ambiguous Hit Correction</a></li>
+<li><a class="reference internal" href="#resolved">Resolved</a></li>
+<li><a class="reference internal" href="#most-recent-common-ancestor">Most Recent Common Ancestor</a></li>
+<li><a class="reference internal" href="#placement-tree">Placement Tree</a></li>
+<li><a class="reference internal" href="#tsv-format">TSV Format</a></li>
+<li><a class="reference internal" href="#samples-file">Samples File</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#input-file-formats">Input File Formats</a><ul>
+<li><a class="reference internal" href="#fasta-input-format">Fasta Input Format</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clade-output-format">Clade Output Format</a><ul>
+<li><a class="reference internal" href="#hits-output">HITS OUTPUT</a></li>
+<li><a class="reference internal" href="#nohits-output">NOHITS OUTPUT</a></li>
+<li><a class="reference internal" href="#ambiguous-output">AMBIGUOUS OUTPUT</a></li>
+<li><a class="reference internal" href="#lowout">LOWOUT</a></li>
+<li><a class="reference internal" href="#multiple-output">MULTIPLE OUTPUT</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#subtype-output-formats">Subtype Output Formats</a><ul>
+<li><a class="reference internal" href="#newout">NEWOUT</a></li>
+<li><a class="reference internal" href="#perfect-output">PERFECT OUTPUT</a></li>
+<li><a class="reference internal" href="#short-output">SHORT OUTPUT</a></li>
+<li><a class="reference internal" href="#shortnew-output">SHORTNEW OUTPUT</a></li>
+<li><a class="reference internal" href="#unique-output">UNIQUE OUTPUT</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resolvemultiplehits-output-formats">ResolveMultipleHits Output Formats</a><ul>
+<li><a class="reference internal" href="#corrected-output-all-clade">Corrected Output All Clade</a></li>
+<li><a class="reference internal" href="#resolved-output-all-clades">Resolved Output All Clades</a></li>
+<li><a class="reference internal" href="#corrected-output-per-clade">Corrected Output Per Clade</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="CommanLine.html"
+                        title="previous chapter">Command Line Symtyper</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/defs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="CommanLine.html" title="Command Line Symtyper"
+             >previous</a> |</li>
+        <li><a href="index.html">Symtyper_docs 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Mahdi Belcaid.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>
