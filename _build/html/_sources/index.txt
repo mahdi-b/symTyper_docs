@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
    
    Web 
-   CommanLine
+   CommandLine
    defs
 
 Indices and tables

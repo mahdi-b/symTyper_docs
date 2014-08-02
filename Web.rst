@@ -41,7 +41,7 @@ Please copy the URL for future access. Job will be hosted on the Symtyper Site f
 
 If the anlysis completed successfully, you should be presented with
 the a summary table where the various componenents of the analysis
-can be accesses. The results are gouped by section; Clases, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
+can be accessed. The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
    
 
 .. _main_results_page:
@@ -54,15 +54,14 @@ can be accesses. The results are gouped by section; Clases, Subtypes, Multiples,
    SymTyper Results Main Screen
 
 ==================   ============
-Section              Definication
+Section              Description
 ==================   ============
-Clades		     Shows the breakdown of clades per sample. The results can be viewed or download as a matrix or show as a piechart per sample.
-Subtypes	     Shows the breakdowns of sybtypes per sample. The results can be viewed independently for the perfect, unique and  ShortNew subtypes. 
-		     The difference between these three categories is described  :ref:`unique`.
-Multiples	     This graphs shows the disctribution of sequences for each clade contaning multiple hits. The definition of a Multiple hits is described in the :ref:`multiples` section
-Trees		     Described the breakdown of number of sequences assigned to internal nodes of the tree the clde tree per sample. The tree representation show the combined counts for all
+Clades		     Shows the breakdown of clades per sample. The results can be viewed or download as a matrix or show as a piechart per sample
+Subtypes	     Shows the breakdowns of subtypes per sample. The results can be viewed independently for the :ref:`perfect`, :ref:`unique` and  :ref:`ShortNew` subtypes
+Multiples	     The graphs shows the distribution of sequences for each clade contaning multiple hits. The definition of a Multiple hits is described in the :ref:`multiples` section
+Trees		     Describes the breakdown of the number of sequences assigned to the internal nodes, and the clades per sample. The tree representation show the combined count for all
 		     the samples  
-Breakdown	     Shows the Sunburst represrntation of Clade and sutypes by Tree
+Breakdown	     Shows a Sunburst representation of the Clades and subtypes by sample
 ==================   ============
 
 
@@ -87,7 +86,7 @@ downloaded from the results main page (see :ref:`main_results_page`).
 Subtypes View 
 +++++++++++++++
 
-This Subtypes Views shows the breakdown of sybtypes per sample. The results
+The Subtypes Views shows the breakdown of subtypes per sample. The results
 can be viewed independently for the :ref:`perfect`, :ref:`unique` and the
 :ref:`ShortNew` subtypes. The subtypes are assigned based on the blast results of the query sequences to
 the clade specific references. 
@@ -105,18 +104,18 @@ the clade specific references.
 =========   ==============================================================================================================================================================================
 =========   ==============================================================================================================================================================================
 Perfect     A query sequence that aligns perfectly or with very high similarity to a unique symbiont reference in the database (e.g., 100% similarity to 100% of the length of the target) 
-Unique 	    A query sequence that aligns umabiguously to symbiont reference in the database. (e.g., :math:`>=` user defined % 
+Unique 	    A query sequence that aligns unambiguously to symbiont reference in the database. (e.g., :math:`>=` user defined % 
 	    similarity to 100% target length and the bit score for the best hit is at least 3 orders or magnitude larger than than that for the second hit); 
-ShortNew    A query sequence shorer than the average sequence in the reference database 
-	    but which aligns with high similarity to a unique reference according to the dynamic similarity threshold (See :ref:`dynamic_similarity`) 
+ShortNew    A query sequence shorter than the average sequence in the reference database 
+	    but aligns with high similarity to a unique reference according to the dynamic similarity threshold (See :ref:`dynamic_similarity`) 
 =========   ==============================================================================================================================================================================
 
 
 Multiples View
 ++++++++++++++++
 
-The Multiples View is a graphical representation of corrected sybtypes
-counts to which ambiguous sequences map. The algortihm used to
+The Multiples View is a graphical representation of the corrected subtypes
+count to which ambiguous sequences map. The algortihm used to
 resolved multiple hits is described in the :ref:`multiple_hits` and
 detailed in the manuscript.
 
@@ -126,7 +125,7 @@ detailed in the manuscript.
    :alt: Subtypes view
    :align: center
 
-   Sybtypes Distribution for the Corrected Ambiguous Hits
+   Subtypes Distribution for the Corrected Ambiguous Hits
 
 The breakedown of subtypes for :ref:`resolved` under the "Resolved tab"
 
@@ -141,12 +140,11 @@ Trees View
 
    Distribution of Ambiguous Sequences in the Clade Phylogeny.
 
-For each clade phylogeny, this view compiles the number the number the
-number of time an :ref:`mrca` was identified for an ambiguous sequence
-(after the :ref:`multiple_hits` stage). The tree can downloaded in the
-Newick format and viewed or parsed in phylogeny applications. A matrix
-file comparing results across samples can be be found in output
-archive available for download from the main page.
+For each clade phylogeny, this view compiles the number of times an :ref:`mrca` 
+was identified for an ambiguous sequence (after the :ref:`multiple_hits` stage). 
+The tree can be downloaded in the Newick format and viewed or parsed in phylogeny 
+applications. A matrix file comparing results across samples can be be found in 
+output archive available for download from the main page.
 
 
 Breakdown View
@@ -158,11 +156,7 @@ Breakdown View
    :scale: 50%
    :alt: Subtypes view
    :align: center
-
-This view summarizes using a Sunburst visualizaiton  the intricate structure of
- Symbiodinium clades and subtypes in a single or between two samples,
- through a user-friendly graphical representations names
- Sunburst. Highlighting a level of the Sunburst charts diplay its
- structure and the percentage of sample reads assigns to it.
-
-
+Using user-friendly graphical Sunburst representation, 
+this view summarizes the intricate structure of Symbiodinium clades and subtypes 
+in a single or multi-sample view. Highlighting a level of the Sunburst charts display 
+its structure and the percentage of sample reads assigned to it.

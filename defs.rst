@@ -11,7 +11,7 @@ Definitions
 HIT
 +++
 
-This is a clade-relevant definition. To be a HIT against a clade reference sequence, a query need to unambiguously align with a defined similarity over a defined percentage of its length. 
+This is a clade-relevant definition. To be a HIT against a clade reference sequence, a query needs to unambiguously align with a defined similarity over a defined percentage of its length. 
 Furthermore, the e-value of the first hit needs to be at least K orders of magnitude larger than that of an alternative clade. 
 
 
@@ -44,7 +44,7 @@ Perfect
 This is a subtype-relevant definition. Perfect refers to a query
 sequence that aligns unambiguously to one sequence in the reference
 database (e.g., 100% similarity to 100% of the length of the target)
-for for which the best hit's raw bit score is at least 3 orders of
+for which the best hit's raw bit score is at least 3 orders of
 magnitude larger than the raw bit score for the second hit.
 
 
@@ -80,7 +80,7 @@ ShortNew
 
 This is a subtype-relevant definition. ShortNew refers to a query sequence that aligns with high similarity to
 a unique reference sequence according to the dynamic similarity
-threshold (Equation 1: :ref:`dynamic_similarity`) below;
+threshold (Equation 1: :ref:`dynamic_similarity`) below.
 
 
 
@@ -91,7 +91,7 @@ threshold (Equation 1: :ref:`dynamic_similarity`) below;
 Multiples
 +++++++++
 
-This is a subtype-relevant definition. A query sequence of type multiple is a sequence that aligns with equal similarity to multiple subtypes  sequences.
+This is a subtype-relevant definition. A query sequence of type multiple is a sequence that aligns with equal similarity to multiple subtypes sequences.
 
 
 
@@ -100,7 +100,8 @@ This is a subtype-relevant definition. A query sequence of type multiple is a se
 Short
 +++++
 
-This is a subtype-relevant definition. A query of type short, is one does not meet minimum similarity and length requirements (e.g., <90% similarity to <90% of the length of the target). 
+This is a subtype-relevant definition. A query of type short, is one that does not meet the minimum 
+similarity and length requirements (e.g., :math:`<` 90% similarity to :math:`<` 90% of the length of the target). 
 
 
 .. _dynamic_similarity:
@@ -113,7 +114,7 @@ that are shorter than the database references to be considered as potential
 hits. However, the shorter the sequnces, the higher the required stringency. 
 The dynamic similarity threshold is computed as:
 
-:math:`requird\_similarity = 100 - \frac{C - min_c}{1-min_c} * (100 - min_s)`
+:math:`required\_similarity = 100 - \frac{C - min_c}{1-min_c} * (100 - min_s)`
 
 where:
 
@@ -130,7 +131,7 @@ Ambiguous Hit Correction
 ++++++++++++++++++++++++
 
 
-An ambiguous hit occrs when a sequences aligns with multiple subtypes. To try to infer the correct subtype of 
+An ambiguous hit occurs when a sequences aligns with multiple subtypes. To try to infer the correct subtype of 
 the sequence, we employ a strategy similar to the wisdom of the crowd, and allow similar sequences to help contribute 
 information about the closest subtype of the sequence. To do so, ambiguous sequences are clustered using high stringency 
 and a subtype distribution (or spectrum) is computed for each cluster. 
@@ -141,23 +142,23 @@ Suppose a cluster has a distribution:
 88 C1.1, 45 C1.18, 6 C1.21 and 2 C1.28. This means that at least 88 sequences in the cluster were subtyped as C1.1. and only 1 
 was subtyped as C1.28. 
 
-Clusters' distributions are usually highly skewed with few high
-frequency subtypes and a greater number of low frequency types.  Since
-there distributions are subsequently used to infer the :ref:`mrca`
-(MRCA) sequence as a proxy, it is very improtant to rid the data of
-unlikely subtype that can bias the computation of the MRCA. For the
-previous distribution, the wisdom of the crowd tells us that this
-cluster of sequences is closest to C1.1. and unlikely to be C1.28 and
-therfore drops it for the C1.28. The same can be said about C1.21
-since only 6 sequences have been aligned to it.  The corrected
-distribution is thus likely 88 C1.1, 45 C1.18. This distribution will
-be subsequently used to map the reads to the common ancestor in the
+Clusters' distributions are usually highly skewed with few high 
+frequency subtypes and a greater number of low frequency types.  Since 
+there distributions are subsequently used to infer the :ref:`mrca` 
+(MRCA) sequence as a proxy, it is very improtant to rid the data of 
+unlikely subtype that can bias the computation of the MRCA. For the 
+previous distribution, the wisdom of the crowd tells us that this 
+cluster of sequences is closest to C1.1. and unlikely to be C1.28 and 
+therfore drops it for the C1.28. The same can be said about C1.21 
+since only 6 sequences have been aligned to it.  The corrected 
+distribution is thus likely 88 C1.1, 45 C1.18. This distribution will 
+be subsequently used to map the reads to the common ancestor in the 
 phylogeny.
 
-The algoirthm used to correct the subtypes distribution uses a similar
-approach by formalizing which subtypes to drop for the distribution
+The algoirthm used to correct the subtypes distribution uses a similar 
+approach by formalizing which subtypes to drop for the distribution 
 using a strigency parameter p. To do so, we iteratively drop the 
-the subtypes that have counts within the :math:`p^{th}` percentile of the distribution and stop
+the subtypes that have counts within the :math:`p^{th}` percentile of the distribution and stop 
 when no subtypes can be dropped. 
 
 
@@ -175,7 +176,7 @@ An ambiguous read is said to be resolved if its filtered distribution after the 
 Most Recent Common Ancestor
 +++++++++++++++++++++++++++
 
-In a phylogenetic tree, an internal node, :math:`N`, is the most recent commot recent ancestor of a set of leaves :math:`L`, if :math:`N` is the first common parent 
+In a phylogenetic tree, an internal node, :math:`N`, is the most recent common ancestor of a set of leaves :math:`L`, if :math:`N` is the first common parent 
 of all the leaves of in :math:`L`
 
 Placement Tree 
@@ -336,7 +337,7 @@ Corrected Output All Clade
 ++++++++++++++++++++++++++
 
 
-tab separated fields and colon separated values. Ex.
+Tab separated fields and colon separated values. Ex.
 
 ``Cluster: CL_415 numSeq: 6       clade: C        breakDown:180:4 175M:2  subtypes: C3.24_HE579012: 6, C3k_AY589737: 6, C3.23_HE579011: 6``
 
@@ -359,7 +360,7 @@ Resolved Output All Clades
 Corrected Output Per Clade
 ++++++++++++++++++++++++++
 
-This file fomat is similar to that in :ref:`correctedAll` execpt that the `subtype` list represents the corrected (or effective), rather than initial, subtypes
+This file format is similar to that in :ref:`correctedAll` except that the `subtype` list represents the corrected (or effective), rather than initial, subtypes.
 
 
 

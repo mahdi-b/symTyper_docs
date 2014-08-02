@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Symtyper_docs 0.1 documentation" href="index.html" />
-    <link rel="prev" title="Command Line Symtyper" href="CommanLine.html" /> 
+    <link rel="prev" title="Command Line Symtyper" href="CommandLine.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,7 +35,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="CommanLine.html" title="Command Line Symtyper"
+          <a href="CommandLine.html" title="Command Line Symtyper"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Symtyper_docs 0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -52,7 +52,7 @@
 <h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="hit">
 <span id="hits"></span><h3>HIT<a class="headerlink" href="#hit" title="Permalink to this headline">¶</a></h3>
-<p>This is a clade-relevant definition. To be a HIT against a clade reference sequence, a query need to unambiguously align with a defined similarity over a defined percentage of its length.
+<p>This is a clade-relevant definition. To be a HIT against a clade reference sequence, a query needs to unambiguously align with a defined similarity over a defined percentage of its length.
 Furthermore, the e-value of the first hit needs to be at least K orders of magnitude larger than that of an alternative clade.</p>
 </div>
 <div class="section" id="nohit">
@@ -68,13 +68,13 @@ Furthermore, the e-value of the first hit needs to be at least K orders of magni
 <p>This is a subtype-relevant definition. Perfect refers to a query
 sequence that aligns unambiguously to one sequence in the reference
 database (e.g., 100% similarity to 100% of the length of the target)
-for for which the best hit&#8217;s raw bit score is at least 3 orders of
+for which the best hit&#8217;s raw bit score is at least 3 orders of
 magnitude larger than the raw bit score for the second hit.</p>
 </div>
 <div class="section" id="unique">
 <span id="id3"></span><h3>Unique<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h3>
 <p>This is a subtype-relevant definition. Unique refers to a query sequence that aligns to a single reference in
-the database with a user-defined (e.g., ≥ user defined % similarity
+the database with a user-defined (e.g., <span class="math">\(&gt;=\)</span> user defined % similarity
 to 100% target length) for which the best hit&#8217;s raw bit score is at
 least 3 orders of magnitude larger than the raw bit score for the
 second hit.</p>
@@ -87,15 +87,16 @@ second hit.</p>
 <span id="id5"></span><h3>ShortNew<a class="headerlink" href="#shortnew" title="Permalink to this headline">¶</a></h3>
 <p>This is a subtype-relevant definition. ShortNew refers to a query sequence that aligns with high similarity to
 a unique reference sequence according to the dynamic similarity
-threshold (Equation 1: <a class="reference internal" href="#dynamic-similarity"><em>Dynamic Similarity</em></a>) below;</p>
+threshold (Equation 1: <a class="reference internal" href="#dynamic-similarity"><em>Dynamic Similarity</em></a>) below.</p>
 </div>
 <div class="section" id="multiples">
 <span id="id6"></span><h3>Multiples<a class="headerlink" href="#multiples" title="Permalink to this headline">¶</a></h3>
-<p>This is a subtype-relevant definition. A query sequence of type multiple is a sequence that aligns with equal similarity to multiple subtypes  sequences.</p>
+<p>This is a subtype-relevant definition. A query sequence of type multiple is a sequence that aligns with equal similarity to multiple subtypes sequences.</p>
 </div>
 <div class="section" id="short">
 <span id="id7"></span><h3>Short<a class="headerlink" href="#short" title="Permalink to this headline">¶</a></h3>
-<p>This is a subtype-relevant definition. A query of type short, is one does not meet minimum similarity and length requirements (e.g., &lt;90% similarity to &lt;90% of the length of the target).</p>
+<p>This is a subtype-relevant definition. A query of type short, is one that does not meet the minimum
+similarity and length requirements (e.g., <span class="math">\(&lt;\)</span> 90% similarity to <span class="math">\(&lt;\)</span> 90% of the length of the target).</p>
 </div>
 <div class="section" id="dynamic-similarity">
 <span id="id8"></span><h3>Dynamic Similarity<a class="headerlink" href="#dynamic-similarity" title="Permalink to this headline">¶</a></h3>
@@ -103,7 +104,7 @@ threshold (Equation 1: <a class="reference internal" href="#dynamic-similarity">
 that are shorter than the database references to be considered as potential
 hits. However, the shorter the sequnces, the higher the required stringency.
 The dynamic similarity threshold is computed as:</p>
-<p><span class="math">\(requird\_similarity = 100 - \frac{C - min_c}{1-min_c} * (100 - min_s)\)</span></p>
+<p><span class="math">\(required\_similarity = 100 - \frac{C - min_c}{1-min_c} * (100 - min_s)\)</span></p>
 <p>where:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -125,7 +126,7 @@ The dynamic similarity threshold is computed as:</p>
 </div>
 <div class="section" id="ambiguous-hit-correction">
 <span id="multiple-hits"></span><h3>Ambiguous Hit Correction<a class="headerlink" href="#ambiguous-hit-correction" title="Permalink to this headline">¶</a></h3>
-<p>An ambiguous hit occrs when a sequences aligns with multiple subtypes. To try to infer the correct subtype of
+<p>An ambiguous hit occurs when a sequences aligns with multiple subtypes. To try to infer the correct subtype of
 the sequence, we employ a strategy similar to the wisdom of the crowd, and allow similar sequences to help contribute
 information about the closest subtype of the sequence. To do so, ambiguous sequences are clustered using high stringency
 and a subtype distribution (or spectrum) is computed for each cluster.</p>
@@ -156,7 +157,7 @@ when no subtypes can be dropped.</p>
 </div>
 <div class="section" id="most-recent-common-ancestor">
 <span id="mrca"></span><h3>Most Recent Common Ancestor<a class="headerlink" href="#most-recent-common-ancestor" title="Permalink to this headline">¶</a></h3>
-<p>In a phylogenetic tree, an internal node, <span class="math">\(N\)</span>, is the most recent commot recent ancestor of a set of leaves <span class="math">\(L\)</span>, if <span class="math">\(N\)</span> is the first common parent
+<p>In a phylogenetic tree, an internal node, <span class="math">\(N\)</span>, is the most recent common ancestor of a set of leaves <span class="math">\(L\)</span>, if <span class="math">\(N\)</span> is the first common parent
 of all the leaves of in <span class="math">\(L\)</span></p>
 </div>
 <div class="section" id="placement-tree">
@@ -278,7 +279,7 @@ of all the leaves of in <span class="math">\(L\)</span></p>
 <h2>ResolveMultipleHits Output Formats<a class="headerlink" href="#resolvemultiplehits-output-formats" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="corrected-output-all-clade">
 <span id="correctedall"></span><h3>Corrected Output All Clade<a class="headerlink" href="#corrected-output-all-clade" title="Permalink to this headline">¶</a></h3>
-<p>tab separated fields and colon separated values. Ex.</p>
+<p>Tab separated fields and colon separated values. Ex.</p>
 <p><tt class="docutils literal"><span class="pre">Cluster:</span> <span class="pre">CL_415</span> <span class="pre">numSeq:</span> <span class="pre">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">clade:</span> <span class="pre">C</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pre">breakDown:180:4</span> <span class="pre">175M:2</span>&nbsp; <span class="pre">subtypes:</span> <span class="pre">C3.24_HE579012:</span> <span class="pre">6,</span> <span class="pre">C3k_AY589737:</span> <span class="pre">6,</span> <span class="pre">C3.23_HE579011:</span> <span class="pre">6</span></tt></p>
 <p>The previous line tell us that CL_145 representes 6 Sequences, 2 form sample 175M and 4 from sample 180. These sequences are in Clade C and have the subtype distribution listed in <cite>subtype</cite> list.</p>
 </div>
@@ -293,7 +294,7 @@ of all the leaves of in <span class="math">\(L\)</span></p>
 </div>
 <div class="section" id="corrected-output-per-clade">
 <span id="correctedperclade"></span><h3>Corrected Output Per Clade<a class="headerlink" href="#corrected-output-per-clade" title="Permalink to this headline">¶</a></h3>
-<p>This file fomat is similar to that in <a class="reference internal" href="#correctedall"><em>Corrected Output All Clade</em></a> execpt that the <cite>subtype</cite> list represents the corrected (or effective), rather than initial, subtypes</p>
+<p>This file format is similar to that in <a class="reference internal" href="#correctedall"><em>Corrected Output All Clade</em></a> except that the <cite>subtype</cite> list represents the corrected (or effective), rather than initial, subtypes.</p>
 </div>
 </div>
 </div>
@@ -357,7 +358,7 @@ of all the leaves of in <span class="math">\(L\)</span></p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="CommanLine.html"
+  <p class="topless"><a href="CommandLine.html"
                         title="previous chapter">Command Line Symtyper</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
@@ -388,14 +389,14 @@ of all the leaves of in <span class="math">\(L\)</span></p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="CommanLine.html" title="Command Line Symtyper"
+          <a href="CommandLine.html" title="Command Line Symtyper"
              >previous</a> |</li>
         <li><a href="index.html">Symtyper_docs 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2014, Mahdi Belcaid.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>
