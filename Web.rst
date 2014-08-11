@@ -156,6 +156,7 @@ Breakdown View
    :scale: 50%
    :alt: Subtypes view
    :align: center
+
 Using user-friendly graphical Sunburst representation, 
 this view summarizes the intricate structure of Symbiodinium clades and subtypes 
 in a single or multi-sample view. Highlighting a level of the Sunburst charts display 

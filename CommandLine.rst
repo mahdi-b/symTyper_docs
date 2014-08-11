@@ -153,7 +153,7 @@ Param                        Description
 -c, --correctedResultsDir    Directory containing corrected Clade placements (the correctedMultiplesHits/corrected directory from resolveMultipleHits)
 -n, --newickFilesDir	     Newick directory for input calde phylogenies in Newick format
 -o, --outputDir 	     Dir that will contain the newick and interenal nodes information
-======================  ===========
+===========================  ===========
 
 
 

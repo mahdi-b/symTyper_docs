@@ -14,7 +14,7 @@
 
 
 \title{Symtyper\_docs Documentation}
-\date{June 26, 2014}
+\date{August 11, 2014}
 \release{0.1}
 \author{Mahdi Belcaid}
 \newcommand{\sphinxlogo}{}
@@ -125,7 +125,7 @@ Contents:
 
 
 \chapter{Web-based Symtyper}
-\label{Web::doc}\label{Web:web-based-symtyper}\label{Web:welcome-to-symtyper-docs-s-documentation}
+\label{Web::doc}\label{Web:welcome-to-symtyper-s-documentation}\label{Web:web-based-symtyper}
 
 \section{Brief Overview}
 \label{Web:brief-overview}
@@ -159,7 +159,7 @@ Please copy the URL for future access. Job will be hosted on the Symtyper Site f
 
 If the anlysis completed successfully, you should be presented with
 the a summary table where the various componenents of the analysis
-can be accesses. The results are gouped by section; Clases, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
+can be accessed. The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
 \begin{figure}[htbp]
 \centering
 \capstart
@@ -172,34 +172,33 @@ can be accesses. The results are gouped by section; Clases, Subtypes, Multiples,
 \textsf{\relax 
 Section
 } & \textsf{\relax 
-Definication
+Description
 }\\
 \hline
 Clades
  & 
-Shows the breakdown of clades per sample. The results can be viewed or download as a matrix or show as a piechart per sample.
+Shows the breakdown of clades per sample. The results can be viewed or download as a matrix or show as a piechart per sample
 \\
 
 Subtypes
  & 
-Shows the breakdowns of sybtypes per sample. The results can be viewed independently for the perfect, unique and  ShortNew subtypes.
-The difference between these three categories is described  {\hyperref[defs:unique]{\emph{Unique}}}.
+Shows the breakdowns of subtypes per sample. The results can be viewed independently for the {\hyperref[defs:perfect]{\emph{Perfect}}}, {\hyperref[defs:unique]{\emph{Unique}}} and  {\hyperref[defs:shortnew]{\emph{ShortNew}}} subtypes
 \\
 
 Multiples
  & 
-This graphs shows the disctribution of sequences for each clade contaning multiple hits. The definition of a Multiple hits is described in the {\hyperref[defs:multiples]{\emph{Multiples}}} section
+The graphs shows the distribution of sequences for each clade contaning multiple hits. The definition of a Multiple hits is described in the {\hyperref[defs:multiples]{\emph{Multiples}}} section
 \\
 
 Trees
  & 
-Described the breakdown of number of sequences assigned to internal nodes of the tree the clde tree per sample. The tree representation show the combined counts for all
+Describes the breakdown of the number of sequences assigned to the internal nodes, and the clades per sample. The tree representation show the combined count for all
 the samples
 \\
 
 Breakdown
  & 
-Shows the Sunburst represrntation of Clade and sutypes by Tree
+Shows a Sunburst representation of the Clades and subtypes by sample
 \\
 \hline\end{tabulary}
 
@@ -222,7 +221,7 @@ downloaded from the results main page (see {\hyperref[Web:main-results-page]{\em
 
 \subsection{Subtypes View}
 \label{Web:subtypes-view}
-This Subtypes Views shows the breakdown of sybtypes per sample. The results
+The Subtypes Views shows the breakdown of subtypes per sample. The results
 can be viewed independently for the {\hyperref[defs:perfect]{\emph{Perfect}}}, {\hyperref[defs:unique]{\emph{Unique}}} and the
 {\hyperref[defs:shortnew]{\emph{ShortNew}}} subtypes. The subtypes are assigned based on the blast results of the query sequences to
 the clade specific references.
@@ -244,14 +243,14 @@ A query sequence that aligns perfectly or with very high similarity to a unique 
 
 Unique
  & 
-A query sequence that aligns umabiguously to symbiont reference in the database. (e.g., \(>=\) user defined \%
+A query sequence that aligns unambiguously to symbiont reference in the database. (e.g., \(>=\) user defined \%
 similarity to 100\% target length and the bit score for the best hit is at least 3 orders or magnitude larger than than that for the second hit);
 \\
 
 ShortNew
  & 
-A query sequence shorer than the average sequence in the reference database
-but which aligns with high similarity to a unique reference according to the dynamic similarity threshold (See {\hyperref[defs:dynamic-similarity]{\emph{Dynamic Similarity}}})
+A query sequence shorter than the average sequence in the reference database
+but aligns with high similarity to a unique reference according to the dynamic similarity threshold (See {\hyperref[defs:dynamic-similarity]{\emph{Dynamic Similarity}}})
 \\
 \hline\end{tabulary}
 
@@ -259,8 +258,8 @@ but which aligns with high similarity to a unique reference according to the dyn
 
 \subsection{Multiples View}
 \label{Web:multiples-view}
-The Multiples View is a graphical representation of corrected sybtypes
-counts to which ambiguous sequences map. The algortihm used to
+The Multiples View is a graphical representation of the corrected subtypes
+count to which ambiguous sequences map. The algortihm used to
 resolved multiple hits is described in the {\hyperref[defs:multiple-hits]{\emph{Ambiguous Hit Correction}}} and
 detailed in the manuscript.
 \begin{figure}[htbp]
@@ -268,7 +267,7 @@ detailed in the manuscript.
 \capstart
 
 \scalebox{0.500000}{\includegraphics{multiples.png}}
-\caption{Sybtypes Distribution for the Corrected Ambiguous Hits}\end{figure}
+\caption{Subtypes Distribution for the Corrected Ambiguous Hits}\end{figure}
 
 The breakedown of subtypes for {\hyperref[defs:resolved]{\emph{Resolved}}} under the ``Resolved tab''
 
@@ -281,12 +280,11 @@ The breakedown of subtypes for {\hyperref[defs:resolved]{\emph{Resolved}}} under
 \scalebox{0.500000}{\includegraphics{multiples.png}}
 \caption{Distribution of Ambiguous Sequences in the Clade Phylogeny.}\end{figure}
 
-For each clade phylogeny, this view compiles the number the number the
-number of time an {\hyperref[defs:mrca]{\emph{Most Recent Common Ancestor}}} was identified for an ambiguous sequence
-(after the {\hyperref[defs:multiple-hits]{\emph{Ambiguous Hit Correction}}} stage). The tree can downloaded in the
-Newick format and viewed or parsed in phylogeny applications. A matrix
-file comparing results across samples can be be found in output
-archive available for download from the main page.
+For each clade phylogeny, this view compiles the number of times an {\hyperref[defs:mrca]{\emph{Most Recent Common Ancestor}}}
+was identified for an ambiguous sequence (after the {\hyperref[defs:multiple-hits]{\emph{Ambiguous Hit Correction}}} stage).
+The tree can be downloaded in the Newick format and viewed or parsed in phylogeny
+applications. A matrix file comparing results across samples can be be found in
+output archive available for download from the main page.
 
 
 \subsection{Breakdown View}
@@ -295,22 +293,20 @@ archive available for download from the main page.
 
 \scalebox{0.500000}{\includegraphics{breakdown.png}}
 \end{figure}
-\begin{description}
-\item[{This view summarizes using a Sunburst visualizaiton  the intricate structure of}] \leavevmode
-Symbiodinium clades and subtypes in a single or between two samples,
-through a user-friendly graphical representations names
-Sunburst. Highlighting a level of the Sunburst charts diplay its
-structure and the percentage of sample reads assigns to it.
 
-\end{description}
+Using user-friendly graphical Sunburst representation,
+this view summarizes the intricate structure of Symbiodinium clades and subtypes
+in a single or multi-sample view. Highlighting a level of the Sunburst charts display
+its structure and the percentage of sample reads assigned to it.
 
 
 \chapter{Command Line Symtyper}
-\label{CommanLine::doc}\label{CommanLine:command-line-symtyper}
+\label{CommandLine::doc}\label{CommandLine:command-line-symtyper}
 
 \section{Installing Symtyper's requirements}
-\label{CommanLine:installing-symtyper-s-requirements}
-The most recent version of Systemtyper is self-contained Python script that can be run without being explicitely installed on the system. However, Symtyper depends on other applciation for its exectution. These applications are
+\label{CommandLine:installing-symtyper-s-requirements}
+The most recent version of Symtyper is a self-contained Python script that can be run without being explicitly installed on the system.
+However, Symtyper depends on other applciation for its exectution. These applications are
 
 \begin{tabulary}{\linewidth}{|L|L|L|}
 \hline
@@ -353,29 +349,29 @@ ete2
 
 xvfb
  &  & 
-This is symtyper will be run on a remote server via ssh
+Required for executing Symtyper on a remote server via ssh
 \\
 \hline\end{tabulary}
 
 
 
 \section{Runnign Symtyper sub-program}
-\label{CommanLine:runnign-symtyper-sub-program}
-Sympter is comprised of 5 subprograms that each carry out a specific funciton.
-These programs are: {\hyperref[CommanLine:clade]{\emph{clade}}}, subtype, resolveMultipleHits, builPlacementTree and makeBiome.
-The details of input, function and ouptut of each of these programs is described in what follows.
+\label{CommandLine:runnign-symtyper-sub-program}
+Symtyper is comprised of 5 subprograms that each carry out a specific funciton.
+These programs are: {\hyperref[CommandLine:clade]{\emph{clade}}}, subtype, resolveMultipleHits, builPlacementTree and makeTSV.
+The details for each program is described below.
 
 
 \subsection{clade}
-\label{CommanLine:clade}\label{CommanLine:id1}
+\label{CommandLine:clade}\label{CommandLine:id1}
 
 \subsubsection{usage}
-\label{CommanLine:usage}
+\label{CommandLine:usage}
 usage: symTyper.py clade {[}-h{]} -s SAMPLESFILE -i INFILE {[}-e EVALUE{]}
 
 
 \subsubsection{Input}
-\label{CommanLine:input}
+\label{CommandLine:input}
 REQUIRED
 
 \begin{tabulary}{\linewidth}{|L|L|}
@@ -400,22 +396,22 @@ The {\hyperref[defs:samplefile]{\emph{Samples File}}}
 
 
 \subsubsection{Ouptut}
-\label{CommanLine:ouptut}
-\textbf{fasta/}: Directory cotaining a collection of fasta sequences representing the intput fasta file plit by sample
-\textbf{hmmer\_output/}: Directory contianing HMMER output files, broken down by sample
-\textbf{hmmer\_parsedOutput/}: Directory containing listing of {\hyperref[defs:ambiguousout]{\emph{AMBIGUOUS OUTPUT}}}, {\hyperref[defs:hitsout]{\emph{HITS OUTPUT}}}, {\hyperref[defs:nohitsout]{\emph{NOHITS OUTPUT}}} and {\hyperref[defs:lowout]{\emph{LOWOUT}}} for eahc of the input samples
-\textbf{hmmer\_hits/}: A directory contianing fasta files, split by clade, of sequences having hits against the clade database.
+\label{CommandLine:ouptut}
+\textbf{fasta/}: Directory cotaining a collection of fasta sequences representing the intput fasta file split by sample
+\textbf{hmmer\_output/}: Directory containing HMMER output files, broken down by sample
+\textbf{hmmer\_parsedOutput/}: Directory containing listing of {\hyperref[defs:ambiguousout]{\emph{AMBIGUOUS OUTPUT}}}, {\hyperref[defs:hitsout]{\emph{HITS OUTPUT}}}, {\hyperref[defs:nohitsout]{\emph{NOHITS OUTPUT}}} and {\hyperref[defs:lowout]{\emph{LOWOUT}}} for each of the input samples
+\textbf{hmmer\_hits/}: Directory containing fasta files, split by clade, of sequences having hits against the clade database.
 
 
 \subsection{subtype}
-\label{CommanLine:subtype}\label{CommanLine:id2}
+\label{CommandLine:subtype}\label{CommandLine:id2}
 usage: symTyper.py subtype {[}-h{]} -s SAMPLESFILE -H HITSDIR -b BLASTOUTDIR -r BLASTRESULTS -f FASTAFILESDIR
-Directory contians HMMER output files, broken down by sample
+Directory contains HMMER output files, broken down by sample
 
 
 \subsubsection{Input}
-\label{CommanLine:id3}
-The input to ``clade'' is expected to be in the same format as that produced by the {\hyperref[CommanLine:clade]{\emph{clade}}} subprogram
+\label{CommandLine:id3}
+The input to ``clade'' is expected to be in the same format as that produced by the {\hyperref[CommandLine:clade]{\emph{clade}}} subprogram
 
 \begin{tabulary}{\linewidth}{|L|L|}
 \hline
@@ -427,7 +423,7 @@ Description
 \hline
 -f, --fastaFilesDir
  & 
-Directory cotaining sequences from input fasta file, split by \emph{clade} (fasta directory)
+Directory cotaining sequences from the input fasta file, split by \emph{clade} (fasta directory)
 \\
 
 -s, --samplesFile
@@ -437,12 +433,12 @@ The {\hyperref[defs:samplefile]{\emph{Samples File}}}
 
 -H, --hitsDir
  & 
-HMMER fasta hits ouput directory produced by {\hyperref[CommanLine:clade]{\emph{clade}}} (hmmer\_hits directory)
+HMMER fasta hits output directory produced by {\hyperref[CommandLine:clade]{\emph{clade}}} (hmmer\_hits directory)
 \\
 
 -b, --blastOutDir
  & 
-Blast ouput directory
+Blast output directory
 \\
 
 -r, --blastResults
@@ -454,11 +450,11 @@ Parsed blast results directory
 
 
 \subsubsection{Output}
-\label{CommanLine:output}
-\textbf{blast\_output/}: Directory contianing Blast output files, broken down by sample
-\textbf{blastResults/}: Directory informaiton on the {\hyperref[defs:perfect]{\emph{Perfect}}}, {\hyperref[defs:unique]{\emph{Unique}}}, {\hyperref[defs:new]{\emph{New}}}, {\hyperref[defs:shortnew]{\emph{ShortNew}}} and {\hyperref[defs:short]{\emph{Short}}}
+\label{CommandLine:output}
+\textbf{blast\_output/}: Directory containing Blast output files, broken down by sample
+\textbf{blastResults/}: Directory containing informaiton on the {\hyperref[defs:perfect]{\emph{Perfect}}}, {\hyperref[defs:unique]{\emph{Unique}}}, {\hyperref[defs:new]{\emph{New}}}, {\hyperref[defs:shortnew]{\emph{ShortNew}}} and {\hyperref[defs:short]{\emph{Short}}}
 
-The output formats for the the files in blastResults/ be found here:
+The output formats for the files in blastResults/ can be found here:
 
 {\hyperref[defs:perfectout]{\emph{PERFECT OUTPUT}}}
 {\hyperref[defs:uniqueout]{\emph{UNIQUE OUTPUT}}}
@@ -468,13 +464,13 @@ The output formats for the the files in blastResults/ be found here:
 
 
 \subsection{resolveMultipleHits}
-\label{CommanLine:id4}\label{CommanLine:resolvemultiplehits}
+\label{CommandLine:id4}\label{CommandLine:resolvemultiplehits}
 
 \subsubsection{Input}
-\label{CommanLine:id5}
+\label{CommandLine:id5}
 usage: symTyper.py resolveMultipleHits {[}-h{]} -s SAMPLESFILE -m MULTIPLEFASTADIR -c CLUSTERSDIR
 
-The input to \textbf{resolveMultipleHits} is expected to be in the same format as that produced by the {\hyperref[CommanLine:subtype]{\emph{subtype}}} subprogram
+The input to \textbf{resolveMultipleHits} is expected to be in the same format as that produced by the {\hyperref[CommandLine:subtype]{\emph{subtype}}} subprogram
 
 \begin{tabulary}{\linewidth}{|L|L|}
 \hline
@@ -491,24 +487,24 @@ The {\hyperref[defs:samplefile]{\emph{Samples File}}}
 
 -m, --multipleFastaDir
  & 
-Directory cotaining sequences that that with multiple hits, split by \emph{clade} (x directory)
+Directory containing sequences with multiple hits, split by \emph{clade} (x directory)
 \\
 
 -c, --clustersDir
  & 
-Dir that will contain cluster information
+Directory that will contain cluster information
 \\
 \hline\end{tabulary}
 
 
 
 \subsubsection{Output}
-\label{CommanLine:id6}
+\label{CommandLine:id6}
 \textbf{resolveMultiples/Reps}: Representatives from each cluster
 \textbf{resolveMultiples/clusters}: Clusters produced for each sample
 \textbf{resolveMultiples/correctedMultiplesHits}: Contains output files from clustering and multiple hit resolution
 
-The resolveMultiples/correctedMultiplesHits directory coantains the following files and directory:
+The resolveMultiples/correctedMultiplesHits directory contains the following files and directory:
 \begin{itemize}
 \item {} 
 correctedOutputFile\_all\_clades: {\hyperref[defs:correctedall]{\emph{Corrected Output All Clade}}}
@@ -517,32 +513,61 @@ correctedOutputFile\_all\_clades: {\hyperref[defs:correctedall]{\emph{Corrected 
 resolvedOutputFile\_all\_clades: {\hyperref[defs:resolvedall]{\emph{Resolved Output All Clades}}}
 
 \item {} 
-corrected/: Contains {\hyperref[defs:correctedperclade]{\emph{Corrected Output Per Clade}}}, split by clade
+corrected/: Contains {\hyperref[defs:correctedperclade]{\emph{Corrected Output Per Clade}}}, split by \emph{clade}
 
 \end{itemize}
 
 
 \subsection{builPlacementTree}
-\label{CommanLine:id7}\label{CommanLine:builplacementtree}
+\label{CommandLine:id7}\label{CommandLine:builplacementtree}
+usage: symTyper.py builPlacementTree {[}-h{]} -c CORRECTEDRESULTSDIR -n NEWICKFILESDIR -o OUTPUTDIR
+
 
 \subsubsection{Input}
-\label{CommanLine:id8}
-Files and directories produced by the {\hyperref[CommanLine:resolvemultiplehits]{\emph{resolveMultipleHits}}} subprogram
+\label{CommandLine:id8}
+The input to \textbf{builPlacementTree} is expected to be in the same format as that produced by the {\hyperref[CommandLine:resolvemultiplehits]{\emph{resolveMultipleHits}}} subprogram
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+Param
+} & \textsf{\relax 
+Description
+}\\
+\hline
+-c, --correctedResultsDir
+ & 
+Directory containing corrected Clade placements (the correctedMultiplesHits/corrected directory from resolveMultipleHits)
+\\
+
+-n, --newickFilesDir
+ & 
+Newick directory for input calde phylogenies in Newick format
+\\
+
+-o, --outputDir
+ & 
+Dir that will contain the newick and interenal nodes information
+\\
+\hline\end{tabulary}
+
 
 
 \subsubsection{Output}
-\label{CommanLine:id9}
+\label{CommandLine:id9}
+The output directory containing the placement information for, broken down by sample
 
-\subsection{makeBiome}
-\label{CommanLine:id10}\label{CommanLine:makebiome}
+
+\subsection{makeTSV}
+\label{CommandLine:id10}\label{CommandLine:maketsv}
 
 \subsubsection{Input}
-\label{CommanLine:id11}
-Files and directories produced by the {\hyperref[CommanLine:builplacementtree]{\emph{builPlacementTree}}} subprogram
+\label{CommandLine:id11}
+Files and directories produced by the {\hyperref[CommandLine:builplacementtree]{\emph{builPlacementTree}}} subprogram
 
 
 \subsubsection{Output}
-\label{CommanLine:id12}
+\label{CommandLine:id12}
 
 \chapter{SymTyper's Concepts}
 \label{defs::doc}\label{defs:symtyper-s-concepts}
@@ -552,7 +577,7 @@ Files and directories produced by the {\hyperref[CommanLine:builplacementtree]{\
 
 \subsection{HIT}
 \label{defs:hits}\label{defs:hit}
-This is a clade-relevant definition. To be a HIT against a clade reference sequence, a query need to unambiguously align with a defined similarity over a defined percentage of its length.
+This is a clade-relevant definition. To be a HIT against a clade reference sequence, a query needs to unambiguously align with a defined similarity over a defined percentage of its length.
 Furthermore, the e-value of the first hit needs to be at least K orders of magnitude larger than that of an alternative clade.
 
 
@@ -571,7 +596,7 @@ This is a clade-relevant definition. Is a sequence
 This is a subtype-relevant definition. Perfect refers to a query
 sequence that aligns unambiguously to one sequence in the reference
 database (e.g., 100\% similarity to 100\% of the length of the target)
-for for which the best hit's raw bit score is at least 3 orders of
+for which the best hit's raw bit score is at least 3 orders of
 magnitude larger than the raw bit score for the second hit.
 
 
@@ -593,17 +618,18 @@ This is a subtype-relevant definition. A New subtype applies to a sequnence with
 \label{defs:id5}\label{defs:shortnew}
 This is a subtype-relevant definition. ShortNew refers to a query sequence that aligns with high similarity to
 a unique reference sequence according to the dynamic similarity
-threshold (Equation 1: {\hyperref[defs:dynamic-similarity]{\emph{Dynamic Similarity}}}) below;
+threshold (Equation 1: {\hyperref[defs:dynamic-similarity]{\emph{Dynamic Similarity}}}) below.
 
 
 \subsection{Multiples}
 \label{defs:id6}\label{defs:multiples}
-This is a subtype-relevant definition. A query sequence of type multiple is a sequence that aligns with equal similarity to multiple subtypes  sequences.
+This is a subtype-relevant definition. A query sequence of type multiple is a sequence that aligns with equal similarity to multiple subtypes sequences.
 
 
 \subsection{Short}
 \label{defs:id7}\label{defs:short}
-This is a subtype-relevant definition. A query of type short, is one does not meet minimum similarity and length requirements (e.g., \textless{}90\% similarity to \textless{}90\% of the length of the target).
+This is a subtype-relevant definition. A query of type short, is one that does not meet the minimum
+similarity and length requirements (e.g., \(<\) 90\% similarity to \(<\) 90\% of the length of the target).
 
 
 \subsection{Dynamic Similarity}
@@ -613,7 +639,7 @@ that are shorter than the database references to be considered as potential
 hits. However, the shorter the sequnces, the higher the required stringency.
 The dynamic similarity threshold is computed as:
 
-\(requird\_similarity = 100 - \frac{C - min_c}{1-min_c} * (100 - min_s)\)
+\(required\_similarity = 100 - \frac{C - min_c}{1-min_c} * (100 - min_s)\)
 
 where:
 
@@ -640,7 +666,7 @@ is the minimum similarity threshold between the query and the hit sequences
 
 \subsection{Ambiguous Hit Correction}
 \label{defs:multiple-hits}\label{defs:ambiguous-hit-correction}
-An ambiguous hit occrs when a sequences aligns with multiple subtypes. To try to infer the correct subtype of
+An ambiguous hit occurs when a sequences aligns with multiple subtypes. To try to infer the correct subtype of
 the sequence, we employ a strategy similar to the wisdom of the crowd, and allow similar sequences to help contribute
 information about the closest subtype of the sequence. To do so, ambiguous sequences are clustered using high stringency
 and a subtype distribution (or spectrum) is computed for each cluster.
@@ -676,7 +702,7 @@ An ambiguous read is said to be resolved if its filtered distribution after the 
 
 \subsection{Most Recent Common Ancestor}
 \label{defs:mrca}\label{defs:most-recent-common-ancestor}
-In a phylogenetic tree, an internal node, \(N\), is the most recent commot recent ancestor of a set of leaves \(L\), if \(N\) is the first common parent
+In a phylogenetic tree, an internal node, \(N\), is the most recent common ancestor of a set of leaves \(L\), if \(N\) is the first common parent
 of all the leaves of in \(L\)
 
 
@@ -875,7 +901,7 @@ Best hit id
 
 \subsection{Corrected Output All Clade}
 \label{defs:correctedall}\label{defs:corrected-output-all-clade}
-tab separated fields and colon separated values. Ex.
+Tab separated fields and colon separated values. Ex.
 
 \code{Cluster: CL\_415 numSeq: 6       clade: C        breakDown:180:4 175M:2  subtypes: C3.24\_HE579012: 6, C3k\_AY589737: 6, C3.23\_HE579011: 6}
 
@@ -901,7 +927,7 @@ Subtype of sequences in the cluster
 
 \subsection{Corrected Output Per Clade}
 \label{defs:correctedperclade}\label{defs:corrected-output-per-clade}
-This file fomat is similar to that in {\hyperref[defs:correctedall]{\emph{Corrected Output All Clade}}} execpt that the \emph{subtype} list represents the corrected (or effective), rather than initial, subtypes
+This file format is similar to that in {\hyperref[defs:correctedall]{\emph{Corrected Output All Clade}}} except that the \emph{subtype} list represents the corrected (or effective), rather than initial, subtypes.
 
 
 \chapter{Indices and tables}

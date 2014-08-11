@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.2.4}builPlacementTree}{11}{subsection.2.2.4}
 \contentsline {subsubsection}{Input}{11}{subsubsection*.10}
 \contentsline {subsubsection}{Output}{11}{subsubsection*.11}
-\contentsline {subsection}{\numberline {2.2.5}makeBiome}{11}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.5}makeTSV}{11}{subsection.2.2.5}
 \contentsline {subsubsection}{Input}{11}{subsubsection*.12}
 \contentsline {subsubsection}{Output}{11}{subsubsection*.13}
 \contentsline {chapter}{\numberline {3}SymTyper's Concepts}{13}{chapter.3}
