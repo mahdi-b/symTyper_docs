@@ -1,12 +1,11 @@
-\BOOKMARK [0][-]{chapter.1}{Web-based Symtyper}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Web-based SymTyper}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Brief Overview}{chapter.1}% 2
 \BOOKMARK [0][-]{chapter.2}{Command Line Symtyper}{}% 3
 \BOOKMARK [1][-]{section.2.1}{Installing Symtyper's requirements}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.2}{Runnign Symtyper sub-program}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Running Symtyper sub-program}{chapter.2}% 5
 \BOOKMARK [0][-]{chapter.3}{SymTyper's Concepts}{}% 6
 \BOOKMARK [1][-]{section.3.1}{Definitions}{chapter.3}% 7
 \BOOKMARK [1][-]{section.3.2}{Input File Formats}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.3}{Clade Output Format}{chapter.3}% 9
 \BOOKMARK [1][-]{section.3.4}{Subtype Output Formats}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.5}{ResolveMultipleHits Output Formats}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Indices and tables}{}% 12

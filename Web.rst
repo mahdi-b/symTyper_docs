@@ -1,45 +1,47 @@
-Web-based Symtyper 
+Web-based SymTyper 
 ==================
 
 
 Brief Overview
 --------------
-To run Symtyper from the web, follow these instructions:
+To run SymTyper from the web, follow these instructions:
 
-First, invoke symtyper main submission page. You should be presented with the following page in Figure 1.
+First, invoke symtyper main submission page (http://www.symtyper.com). You should be presented with the following page in :ref:`fig1`.
+
+.. _fig1:
 
 .. figure:: _static/main.png
    :scale: 50%
-   :alt: Symtyper Main Screen
+   :alt: SymTyper Main Screen
    :align: center
 
-   Symtyper's Main Screen
+   SymTyper's Main Screen
 
-To submit a new analysis, browse and select your input fasta file and a valid  ids file and then click submit.
+To submit a new analysis, browse and select your input fasta file and a valid  ids file (:ref:`inputFormat`) and then click submit.
 
 
 .. figure:: _static/submit_input.png
    :scale: 50%
-   :alt: Symtyper Main Screen
+   :alt: SymTyper Main Screen
    :align: center
 
    Submitting a New SymTyper Analysis
 
 The next screen will provide you with the URL where the output can be accessed.
 Depending on the input size, the processing can take between few minutes to hours.
-Please copy the URL for future access. Job will be hosted on the Symtyper Site for 15 days.
+Please copy the URL for future access. Job will be hosted on the SymTyper site for 15 days.
 
 
 .. figure:: _static/processing.png
    :scale: 50%
-   :alt: Symtyper Main Screen
+   :alt: SymTyper Main Screen
    :align: center
 
    Processing Screen and Job URL
 
 
 
-If the anlysis completed successfully, you should be presented with
+If the anlysis completed successfully, you will be presented with
 the a summary table where the various componenents of the analysis
 can be accessed. The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
    
@@ -48,21 +50,22 @@ can be accessed. The results are gouped by section: Clades, Subtypes, Multiples,
 
 .. figure:: _static/results.png
    :scale: 50%
-   :alt: Symtyper Results Main Screen
+   :alt: SymTyper Results Main Screen
    :align: center
 
    SymTyper Results Main Screen
 
-==================   ============
-Section              Description
-==================   ============
-Clades		     Shows the breakdown of clades per sample. The results can be viewed or download as a matrix or show as a piechart per sample
-Subtypes	     Shows the breakdowns of subtypes per sample. The results can be viewed independently for the :ref:`perfect`, :ref:`unique` and  :ref:`ShortNew` subtypes
-Multiples	     The graphs shows the distribution of sequences for each clade contaning multiple hits. The definition of a Multiple hits is described in the :ref:`multiples` section
-Trees		     Describes the breakdown of the number of sequences assigned to the internal nodes, and the clades per sample. The tree representation show the combined count for all
-		     the samples  
-Breakdown	     Shows a Sunburst representation of the Clades and subtypes by sample
-==================   ============
+.. tabularcolumns:: |p{2cm}|p{13cm}| 
+
+================    ============
+Section    	    Description
+================    ============
+Clades		    Shows the breakdown of clades per sample. The results can be viewed or download as a matrix or show as a piechart per sample
+Subtypes	    Shows the breakdowns of subtypes per sample. The results can be viewed independently for the :ref:`perfect`, :ref:`unique` and  :ref:`ShortNew` subtypes
+Multiples	    The graphs shows the distribution of sequences for each clade contaning multiple hits. The definition of a Multiple hits is described in the :ref:`multiples` section
+Trees		    Describes the breakdown of the number of sequences assigned to the internal nodes, and the clades per sample. The tree representation show the combined count for all the samples  
+Breakdown	    Shows a Sunburst representation of the Clades and subtypes by sample
+================    ============
 
 
 Clades View
@@ -101,14 +104,15 @@ the clade specific references.
    
    Subtypes Distribution per Clade
 
-=========   ==============================================================================================================================================================================
-=========   ==============================================================================================================================================================================
-Perfect     A query sequence that aligns perfectly or with very high similarity to a unique symbiont reference in the database (e.g., 100% similarity to 100% of the length of the target) 
-Unique 	    A query sequence that aligns unambiguously to symbiont reference in the database. (e.g., :math:`>=` user defined % 
-	    similarity to 100% target length and the bit score for the best hit is at least 3 orders or magnitude larger than than that for the second hit); 
-ShortNew    A query sequence shorter than the average sequence in the reference database 
-	    but aligns with high similarity to a unique reference according to the dynamic similarity threshold (See :ref:`dynamic_similarity`) 
-=========   ==============================================================================================================================================================================
+.. tabularcolumns:: |p{2cm}|p{13cm}| 
+
+=========	    ================================
+Section		    Description
+=========	    ================================
+Perfect		    A query sequence that aligns perfectly or with very high similarity to a unique symbiont reference in the database (e.g., 100% similarity to 100% of the length of the target) 
+Unique 	    	    A query sequence that aligns unambiguously to symbiont reference in the database. (e.g., :math:`>=` user defined % similarity to 100% target length and the bit score for the best hit is at least 3 orders or magnitude larger than than that for the second hit); 
+ShortNew	    A query sequence shorter than the average sequence in the reference database but aligns with high similarity to a unique reference according to the dynamic similarity threshold (See :ref:`dynamic_similarity`) 
+=========	    ================================
 
 
 Multiples View
@@ -140,7 +144,7 @@ Trees View
 
    Distribution of Ambiguous Sequences in the Clade Phylogeny.
 
-For each clade phylogeny, this view compiles the number of times an :ref:`mrca` 
+For each clade phylogeny, this view compiles the number of times a :ref:`LCA` 
 was identified for an ambiguous sequence (after the :ref:`multiple_hits` stage). 
 The tree can be downloaded in the Newick format and viewed or parsed in phylogeny 
 applications. A matrix file comparing results across samples can be be found in 

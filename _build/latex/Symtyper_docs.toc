@@ -1,5 +1,5 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Web-based Symtyper}{3}{chapter.1}
+\contentsline {chapter}{\numberline {1}Web-based SymTyper}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Brief Overview}{3}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Clades View}{5}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Subtypes View}{5}{subsection.1.1.2}
@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {1.1.5}Breakdown View}{7}{subsection.1.1.5}
 \contentsline {chapter}{\numberline {2}Command Line Symtyper}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Installing Symtyper's requirements}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Runnign Symtyper sub-program}{9}{section.2.2}
+\contentsline {section}{\numberline {2.2}Running Symtyper sub-program}{9}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}clade}{9}{subsection.2.2.1}
 \contentsline {subsubsection}{usage}{9}{subsubsection*.3}
 \contentsline {subsubsection}{Input}{9}{subsubsection*.4}
@@ -39,7 +39,7 @@
 \contentsline {subsection}{\numberline {3.1.10}Dynamic Similarity}{14}{subsection.3.1.10}
 \contentsline {subsection}{\numberline {3.1.11}Ambiguous Hit Correction}{14}{subsection.3.1.11}
 \contentsline {subsection}{\numberline {3.1.12}Resolved}{15}{subsection.3.1.12}
-\contentsline {subsection}{\numberline {3.1.13}Most Recent Common Ancestor}{15}{subsection.3.1.13}
+\contentsline {subsection}{\numberline {3.1.13}Lowest Common Ancestor}{15}{subsection.3.1.13}
 \contentsline {subsection}{\numberline {3.1.14}Placement Tree}{15}{subsection.3.1.14}
 \contentsline {subsection}{\numberline {3.1.15}TSV Format}{15}{subsection.3.1.15}
 \contentsline {subsection}{\numberline {3.1.16}Samples File}{15}{subsection.3.1.16}
@@ -61,4 +61,3 @@
 \contentsline {subsection}{\numberline {3.5.1}Corrected Output All Clade}{17}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Resolved Output All Clades}{17}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Corrected Output Per Clade}{17}{subsection.3.5.3}
-\contentsline {chapter}{\numberline {4}Indices and tables}{19}{chapter.4}

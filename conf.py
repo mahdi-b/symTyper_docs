@@ -48,8 +48,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Symtyper_docs'
-copyright = u'2014, Mahdi Belcaid'
+project = u'Symtyper'
+copyright = u'2014, Mahdi B1, Hollie Putnam, David Schanenbach, Guylaine Poisson, Ruth Gates'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -201,8 +201,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'Symtyper_docs.tex', u'Symtyper\\_docs Documentation',
-   u'Mahdi Belcaid', 'manual'),
+  ('index', 'Symtyper_docs.tex', u'Symtyper Documentation',
+   u'', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -223,7 +223,7 @@ latex_documents = [
 #latex_appendices = []
 
 # If false, no module index is generated.
-#latex_domain_indices = True
+latex_domain_indices = False
 
 
 # -- Options for manual page output ---------------------------------------
@@ -231,8 +231,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'symtyper_docs', u'Symtyper_docs Documentation',
-     [u'Mahdi Belcaid'], 1)
+    ('index', 'symtyper_docs', u'Symtyper Documentation',
+     [u'Mahdi B3', u'Hollie Putnam', u'Denise Yost', u'David Schanzenbach',  u'Ruth Gates', u'Guylaine Poisson'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -245,8 +245,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Symtyper_docs', u'Symtyper_docs Documentation',
-   u'Mahdi Belcaid', 'Symtyper_docs', 'One line description of project.',
+  ('index', 'Symtyper_docs', u'Symtyper Documentation',
+   u'Mahdi B4', 'Symtyper', 'Symtyper',
    'Miscellaneous'),
 ]
 
@@ -254,7 +254,7 @@ texinfo_documents = [
 #texinfo_appendices = []
 
 # If false, no module index is generated.
-#texinfo_domain_indices = True
+texinfo_domain_indices = False
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'

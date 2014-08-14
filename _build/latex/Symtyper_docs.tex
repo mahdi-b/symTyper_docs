@@ -13,10 +13,10 @@
 \usepackage{multirow}
 
 
-\title{Symtyper\_docs Documentation}
-\date{August 11, 2014}
+\title{Symtyper Documentation}
+\date{August 13, 2014}
 \release{0.1}
-\author{Mahdi Belcaid}
+\author{}
 \newcommand{\sphinxlogo}{}
 \renewcommand{\releasename}{Release}
 \makeindex
@@ -124,22 +124,22 @@
 Contents:
 
 
-\chapter{Web-based Symtyper}
+\chapter{Web-based SymTyper}
 \label{Web::doc}\label{Web:welcome-to-symtyper-s-documentation}\label{Web:web-based-symtyper}
 
 \section{Brief Overview}
 \label{Web:brief-overview}
-To run Symtyper from the web, follow these instructions:
+To run SymTyper from the web, follow these instructions:
 
-First, invoke symtyper main submission page. You should be presented with the following page in Figure 1.
+First, invoke symtyper main submission page (\href{http://www.symtyper.com}{http://www.symtyper.com}). You should be presented with the following page in {\hyperref[Web:fig1]{\emph{SymTyper's Main Screen}}}.
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \scalebox{0.500000}{\includegraphics{main.png}}
-\caption{Symtyper's Main Screen}\end{figure}
+\caption{SymTyper's Main Screen}\label{Web:fig1}\end{figure}
 
-To submit a new analysis, browse and select your input fasta file and a valid  ids file and then click submit.
+To submit a new analysis, browse and select your input fasta file and a valid  ids file ({\hyperref[defs:inputformat]{\emph{Fasta Input Format}}}) and then click submit.
 \begin{figure}[htbp]
 \centering
 \capstart
@@ -149,7 +149,7 @@ To submit a new analysis, browse and select your input fasta file and a valid  i
 
 The next screen will provide you with the URL where the output can be accessed.
 Depending on the input size, the processing can take between few minutes to hours.
-Please copy the URL for future access. Job will be hosted on the Symtyper Site for 15 days.
+Please copy the URL for future access. Job will be hosted on the SymTyper site for 15 days.
 \begin{figure}[htbp]
 \centering
 \capstart
@@ -157,7 +157,7 @@ Please copy the URL for future access. Job will be hosted on the Symtyper Site f
 \scalebox{0.500000}{\includegraphics{processing.png}}
 \caption{Processing Screen and Job URL}\end{figure}
 
-If the anlysis completed successfully, you should be presented with
+If the anlysis completed successfully, you will be presented with
 the a summary table where the various componenents of the analysis
 can be accessed. The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
 \begin{figure}[htbp]
@@ -167,7 +167,7 @@ can be accessed. The results are gouped by section: Clades, Subtypes, Multiples,
 \scalebox{0.500000}{\includegraphics{results.png}}
 \caption{SymTyper Results Main Screen}\label{Web:main-results-page}\end{figure}
 
-\begin{tabulary}{\linewidth}{|L|L|}
+\begin{tabulary}{\linewidth}{|p{2cm}|p{13cm}|}
 \hline
 \textsf{\relax 
 Section
@@ -192,8 +192,7 @@ The graphs shows the distribution of sequences for each clade contaning multiple
 
 Trees
  & 
-Describes the breakdown of the number of sequences assigned to the internal nodes, and the clades per sample. The tree representation show the combined count for all
-the samples
+Describes the breakdown of the number of sequences assigned to the internal nodes, and the clades per sample. The tree representation show the combined count for all the samples
 \\
 
 Breakdown
@@ -232,9 +231,13 @@ the clade specific references.
 \scalebox{0.600000}{\includegraphics{subtypes.png}}
 \caption{Subtypes Distribution per Clade}\end{figure}
 
-\begin{tabulary}{\linewidth}{|L|L|}
+\begin{tabulary}{\linewidth}{|p{2cm}|p{13cm}|}
 \hline
-\textsf{\relax } & \textsf{\relax }\\
+\textsf{\relax 
+Section
+} & \textsf{\relax 
+Description
+}\\
 \hline
 Perfect
  & 
@@ -243,14 +246,12 @@ A query sequence that aligns perfectly or with very high similarity to a unique 
 
 Unique
  & 
-A query sequence that aligns unambiguously to symbiont reference in the database. (e.g., \(>=\) user defined \%
-similarity to 100\% target length and the bit score for the best hit is at least 3 orders or magnitude larger than than that for the second hit);
+A query sequence that aligns unambiguously to symbiont reference in the database. (e.g., \(>=\) user defined \% similarity to 100\% target length and the bit score for the best hit is at least 3 orders or magnitude larger than than that for the second hit);
 \\
 
 ShortNew
  & 
-A query sequence shorter than the average sequence in the reference database
-but aligns with high similarity to a unique reference according to the dynamic similarity threshold (See {\hyperref[defs:dynamic-similarity]{\emph{Dynamic Similarity}}})
+A query sequence shorter than the average sequence in the reference database but aligns with high similarity to a unique reference according to the dynamic similarity threshold (See {\hyperref[defs:dynamic-similarity]{\emph{Dynamic Similarity}}})
 \\
 \hline\end{tabulary}
 
@@ -280,7 +281,7 @@ The breakedown of subtypes for {\hyperref[defs:resolved]{\emph{Resolved}}} under
 \scalebox{0.500000}{\includegraphics{multiples.png}}
 \caption{Distribution of Ambiguous Sequences in the Clade Phylogeny.}\end{figure}
 
-For each clade phylogeny, this view compiles the number of times an {\hyperref[defs:mrca]{\emph{Most Recent Common Ancestor}}}
+For each clade phylogeny, this view compiles the number of times a {\hyperref[defs:lca]{\emph{Lowest Common Ancestor}}}
 was identified for an ambiguous sequence (after the {\hyperref[defs:multiple-hits]{\emph{Ambiguous Hit Correction}}} stage).
 The tree can be downloaded in the Newick format and viewed or parsed in phylogeny
 applications. A matrix file comparing results across samples can be be found in
@@ -355,8 +356,8 @@ Required for executing Symtyper on a remote server via ssh
 
 
 
-\section{Runnign Symtyper sub-program}
-\label{CommandLine:runnign-symtyper-sub-program}
+\section{Running Symtyper sub-program}
+\label{CommandLine:running-symtyper-sub-program}
 Symtyper is comprised of 5 subprograms that each carry out a specific funciton.
 These programs are: {\hyperref[CommandLine:clade]{\emph{clade}}}, subtype, resolveMultipleHits, builPlacementTree and makeTSV.
 The details for each program is described below.
@@ -583,12 +584,12 @@ Furthermore, the e-value of the first hit needs to be at least K orders of magni
 
 \subsection{NOHIT}
 \label{defs:nohits}\label{defs:nohit}
-This is a clade-relevant definition. A Sequence is considered a NOHIT if it does not have any satisfactory alignments against a calde.
+This is a clade-relevant definition. A Sequence is considered a NOHIT if it does not have any satisfactory alignments against a clade.
 
 
 \subsection{AMBIGUOUS}
 \label{defs:ambiguous}\label{defs:id1}
-This is a clade-relevant definition. Is a sequence
+This is a clade-relevant definition. An ambiguous sequence is one that has more than one satisfctory clade hit.
 
 
 \subsection{Perfect}
@@ -677,9 +678,9 @@ was subtyped as C1.28.
 
 Clusters' distributions are usually highly skewed with few high
 frequency subtypes and a greater number of low frequency types.  Since
-there distributions are subsequently used to infer the {\hyperref[defs:mrca]{\emph{Most Recent Common Ancestor}}}
-(MRCA) sequence as a proxy, it is very improtant to rid the data of
-unlikely subtype that can bias the computation of the MRCA. For the
+there distributions are subsequently used to infer the {\hyperref[defs:lca]{\emph{Lowest Common Ancestor}}}
+(LCA) sequence as a proxy, it is very improtant to rid the data of
+unlikely subtype that can bias the computation of the LCA. For the
 previous distribution, the wisdom of the crowd tells us that this
 cluster of sequences is closest to C1.1. and unlikely to be C1.28 and
 therfore drops it for the C1.28. The same can be said about C1.21
@@ -700,10 +701,9 @@ when no subtypes can be dropped.
 An ambiguous read is said to be resolved if its filtered distribution after the {\hyperref[defs:multiple-hits]{\emph{Ambiguous Hit Correction}}} contains a single subtype.
 
 
-\subsection{Most Recent Common Ancestor}
-\label{defs:mrca}\label{defs:most-recent-common-ancestor}
-In a phylogenetic tree, an internal node, \(N\), is the most recent common ancestor of a set of leaves \(L\), if \(N\) is the first common parent
-of all the leaves of in \(L\)
+\subsection{Lowest Common Ancestor}
+\label{defs:lowest-common-ancestor}\label{defs:lca}
+In a phylogenetic tree, an internal node, \(N\), is the lowest common ancestor (or most recent common ancestor) of a set of leaves \(L\), if \(N\) is the first common parent of all the leaves of in \(L\)
 
 
 \subsection{Placement Tree}
@@ -718,7 +718,7 @@ A file with tab delimited columns
 
 \subsection{Samples File}
 \label{defs:samples-file}\label{defs:samplefile}
-A file cotaining the sample, one per lane in the dataset.
+A file cotaining the samples -- one per line -- in the dataset.
 
 
 \section{Input File Formats}
@@ -928,20 +928,6 @@ Subtype of sequences in the cluster
 \subsection{Corrected Output Per Clade}
 \label{defs:correctedperclade}\label{defs:corrected-output-per-clade}
 This file format is similar to that in {\hyperref[defs:correctedall]{\emph{Corrected Output All Clade}}} except that the \emph{subtype} list represents the corrected (or effective), rather than initial, subtypes.
-
-
-\chapter{Indices and tables}
-\label{index:indices-and-tables}\begin{itemize}
-\item {} 
-\emph{genindex}
-
-\item {} 
-\emph{modindex}
-
-\item {} 
-\emph{search}
-
-\end{itemize}
 
 
 

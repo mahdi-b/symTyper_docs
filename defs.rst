@@ -24,7 +24,7 @@ NOHIT
 
 
 
-This is a clade-relevant definition. A Sequence is considered a NOHIT if it does not have any satisfactory alignments against a calde.
+This is a clade-relevant definition. A Sequence is considered a NOHIT if it does not have any satisfactory alignments against a clade.
 
 
 
@@ -33,7 +33,7 @@ This is a clade-relevant definition. A Sequence is considered a NOHIT if it does
 AMBIGUOUS
 +++++++++
 
-This is a clade-relevant definition. Is a sequence 
+This is a clade-relevant definition. An ambiguous sequence is one that has more than one satisfctory clade hit.
 
 
 .. _perfect:
@@ -144,9 +144,9 @@ was subtyped as C1.28.
 
 Clusters' distributions are usually highly skewed with few high 
 frequency subtypes and a greater number of low frequency types.  Since 
-there distributions are subsequently used to infer the :ref:`mrca` 
-(MRCA) sequence as a proxy, it is very improtant to rid the data of 
-unlikely subtype that can bias the computation of the MRCA. For the 
+there distributions are subsequently used to infer the :ref:`lca` 
+(LCA) sequence as a proxy, it is very improtant to rid the data of 
+unlikely subtype that can bias the computation of the LCA. For the 
 previous distribution, the wisdom of the crowd tells us that this 
 cluster of sequences is closest to C1.1. and unlikely to be C1.28 and 
 therfore drops it for the C1.28. The same can be said about C1.21 
@@ -171,13 +171,12 @@ An ambiguous read is said to be resolved if its filtered distribution after the 
 
 
 
-.. _mrca:
+.. _LCA:
 
-Most Recent Common Ancestor
-+++++++++++++++++++++++++++
+Lowest Common Ancestor
+++++++++++++++++++++++
 
-In a phylogenetic tree, an internal node, :math:`N`, is the most recent common ancestor of a set of leaves :math:`L`, if :math:`N` is the first common parent 
-of all the leaves of in :math:`L`
+In a phylogenetic tree, an internal node, :math:`N`, is the lowest common ancestor (or most recent common ancestor) of a set of leaves :math:`L`, if :math:`N` is the first common parent of all the leaves of in :math:`L`
 
 Placement Tree 
 ++++++++++++++
@@ -197,7 +196,7 @@ A file with tab delimited columns
 Samples File
 ++++++++++++
 
-A file cotaining the sample, one per lane in the dataset.
+A file cotaining the samples -- one per line -- in the dataset.
 
 
 

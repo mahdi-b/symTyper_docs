@@ -20,7 +20,7 @@ xvfb			  Required for executing Symtyper on a remote server via ssh
 
 
 
-Runnign Symtyper sub-program
+Running Symtyper sub-program
 ++++++++++++++++++++++++++++
 Symtyper is comprised of 5 subprograms that each carry out a specific funciton. 
 These programs are: :ref:`clade`, subtype, resolveMultipleHits, builPlacementTree and makeTSV.
