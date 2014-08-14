@@ -139,27 +139,27 @@ First, invoke symtyper main submission page (\href{http://www.symtyper.com}{http
 \scalebox{0.500000}{\includegraphics{main.png}}
 \caption{SymTyper's Main Screen}\label{Web:fig1}\end{figure}
 
-To submit a new analysis, browse and select your input fasta file and a valid  ids file ({\hyperref[defs:inputformat]{\emph{Fasta Input Format}}}) and then click submit.
+To submit a new analysis, browse and select your input fasta file and a valid  ids file ({\hyperref[defs:inputformat]{\emph{Fasta Input Format}}}) and then click submit (See {\hyperref[Web:fig2]{\emph{New SymTyper Analysis Screen}}}).
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \scalebox{0.500000}{\includegraphics{submit_input.png}}
-\caption{Submitting a New SymTyper Analysis}\end{figure}
+\caption{New SymTyper Analysis Screen}\label{Web:fig2}\end{figure}
 
 The next screen will provide you with the URL where the output can be accessed.
-Depending on the input size, the processing can take between few minutes to hours.
+Depending on the input size, the processing can take between few minutes to hours (See {\hyperref[Web:fig3]{\emph{Processing Screen and Job URL}}}).
 Please copy the URL for future access. Job will be hosted on the SymTyper site for 15 days.
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \scalebox{0.500000}{\includegraphics{processing.png}}
-\caption{Processing Screen and Job URL}\end{figure}
+\caption{Processing Screen and Job URL}\label{Web:fig3}\end{figure}
 
 If the anlysis completed successfully, you will be presented with
 the a summary table where the various componenents of the analysis
-can be accessed. The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
+can be accessed ({\hyperref[Web:main-results-page]{\emph{SymTyper Results Main Screen}}}). The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
 \begin{figure}[htbp]
 \centering
 \capstart
@@ -209,13 +209,13 @@ The Clades View shows a table view of the distribution of HITS,
 NOHITS, LOW and AMBIGUOUS hits per sample.  Clicking the View Chart
 provides access to the clades distribution for each sample. The
 complete results and disbtribution of clades per sample can be
-downloaded from the results main page (see {\hyperref[Web:main-results-page]{\emph{SymTyper Results Main Screen}}}).
+downloaded from the results main page (see {\hyperref[Web:pie-chart]{\emph{Pie Chart Distribution of Clade per Sample}}}).
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \scalebox{0.500000}{\includegraphics{pie_chart.png}}
-\caption{Pie Chart Distribution of Clade per Sample}\end{figure}
+\caption{Pie Chart Distribution of Clade per Sample}\label{Web:pie-chart}\end{figure}
 
 
 \subsection{Subtypes View}
@@ -223,13 +223,13 @@ downloaded from the results main page (see {\hyperref[Web:main-results-page]{\em
 The Subtypes Views shows the breakdown of subtypes per sample. The results
 can be viewed independently for the {\hyperref[defs:perfect]{\emph{Perfect}}}, {\hyperref[defs:unique]{\emph{Unique}}} and the
 {\hyperref[defs:shortnew]{\emph{ShortNew}}} subtypes. The subtypes are assigned based on the blast results of the query sequences to
-the clade specific references.
+the clade specific references (See {\hyperref[Web:subtype-view]{\emph{Subtypes Distribution per Clade}}}).
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \scalebox{0.600000}{\includegraphics{subtypes.png}}
-\caption{Subtypes Distribution per Clade}\end{figure}
+\caption{Subtypes Distribution per Clade}\label{Web:subtype-view}\end{figure}
 
 \begin{tabulary}{\linewidth}{|p{2cm}|p{13cm}|}
 \hline
@@ -262,25 +262,19 @@ A query sequence shorter than the average sequence in the reference database but
 The Multiples View is a graphical representation of the corrected subtypes
 count to which ambiguous sequences map. The algortihm used to
 resolved multiple hits is described in the {\hyperref[defs:multiple-hits]{\emph{Ambiguous Hit Correction}}} and
-detailed in the manuscript.
+detailed in the manuscript (See {\hyperref[Web:multiplesview]{\emph{Subtypes Distribution for the Corrected Ambiguous Hits}}}).
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \scalebox{0.500000}{\includegraphics{multiples.png}}
-\caption{Subtypes Distribution for the Corrected Ambiguous Hits}\end{figure}
+\caption{Subtypes Distribution for the Corrected Ambiguous Hits}\label{Web:multiplesview}\end{figure}
 
 The breakedown of subtypes for {\hyperref[defs:resolved]{\emph{Resolved}}} under the ``Resolved tab''
 
 
 \subsection{Trees View}
-\label{Web:trees-view}\begin{figure}[htbp]
-\centering
-\capstart
-
-\scalebox{0.500000}{\includegraphics{multiples.png}}
-\caption{Distribution of Ambiguous Sequences in the Clade Phylogeny.}\end{figure}
-
+\label{Web:trees-view}
 For each clade phylogeny, this view compiles the number of times a {\hyperref[defs:lca]{\emph{Lowest Common Ancestor}}}
 was identified for an ambiguous sequence (after the {\hyperref[defs:multiple-hits]{\emph{Ambiguous Hit Correction}}} stage).
 The tree can be downloaded in the Newick format and viewed or parsed in phylogeny
@@ -289,16 +283,18 @@ output archive available for download from the main page.
 
 
 \subsection{Breakdown View}
-\label{Web:breakdown-view}\begin{figure}[htbp]
+\label{Web:breakdown-view}
+Using user-friendly graphical Sunburst representation, this view
+summarizes the intricate structure of Symbiodinium clades and subtypes
+in a single or multi-sample view. Highlighting a level of the Sunburst
+charts display its structure and the percentage of sample reads
+assigned to it (See {\hyperref[Web:sunburst]{\emph{Subtype Breakdown Vizualization}}}).
+\begin{figure}[htbp]
 \centering
+\capstart
 
 \scalebox{0.500000}{\includegraphics{breakdown.png}}
-\end{figure}
-
-Using user-friendly graphical Sunburst representation,
-this view summarizes the intricate structure of Symbiodinium clades and subtypes
-in a single or multi-sample view. Highlighting a level of the Sunburst charts display
-its structure and the percentage of sample reads assigned to it.
+\caption{Subtype Breakdown Vizualization}\label{Web:sunburst}\end{figure}
 
 
 \chapter{Command Line Symtyper}

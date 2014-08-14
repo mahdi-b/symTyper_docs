@@ -17,20 +17,22 @@ First, invoke symtyper main submission page (http://www.symtyper.com). You shoul
 
    SymTyper's Main Screen
 
-To submit a new analysis, browse and select your input fasta file and a valid  ids file (:ref:`inputFormat`) and then click submit.
+To submit a new analysis, browse and select your input fasta file and a valid  ids file (:ref:`inputFormat`) and then click submit (See :ref:`fig2`).
 
+.. _fig2:
 
 .. figure:: _static/submit_input.png
    :scale: 50%
    :alt: SymTyper Main Screen
    :align: center
 
-   Submitting a New SymTyper Analysis
+   New SymTyper Analysis Screen
 
 The next screen will provide you with the URL where the output can be accessed.
-Depending on the input size, the processing can take between few minutes to hours.
+Depending on the input size, the processing can take between few minutes to hours (See :ref:`fig3`).
 Please copy the URL for future access. Job will be hosted on the SymTyper site for 15 days.
 
+.. _fig3:
 
 .. figure:: _static/processing.png
    :scale: 50%
@@ -43,7 +45,7 @@ Please copy the URL for future access. Job will be hosted on the SymTyper site f
 
 If the anlysis completed successfully, you will be presented with
 the a summary table where the various componenents of the analysis
-can be accessed. The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
+can be accessed (:ref:`main_results_page`). The results are gouped by section: Clades, Subtypes, Multiples, Trees, Breakdown. These sections are explained below.
    
 
 .. _main_results_page:
@@ -75,7 +77,10 @@ The Clades View shows a table view of the distribution of HITS,
 NOHITS, LOW and AMBIGUOUS hits per sample.  Clicking the View Chart
 provides access to the clades distribution for each sample. The
 complete results and disbtribution of clades per sample can be
-downloaded from the results main page (see :ref:`main_results_page`).
+downloaded from the results main page (see :ref:`pie_chart`).
+
+
+.. _pie_chart:
 
 .. figure:: _static/pie_chart.png
    :scale: 50%
@@ -92,9 +97,9 @@ Subtypes View
 The Subtypes Views shows the breakdown of subtypes per sample. The results
 can be viewed independently for the :ref:`perfect`, :ref:`unique` and the
 :ref:`ShortNew` subtypes. The subtypes are assigned based on the blast results of the query sequences to
-the clade specific references. 
+the clade specific references (See :ref:`subtype_view`). 
 
-
+.. _subtype_view:
 
 
 .. figure:: _static/subtypes.png
@@ -121,8 +126,9 @@ Multiples View
 The Multiples View is a graphical representation of the corrected subtypes
 count to which ambiguous sequences map. The algortihm used to
 resolved multiple hits is described in the :ref:`multiple_hits` and
-detailed in the manuscript.
+detailed in the manuscript (See :ref:`multiplesview`).
 
+.. _multiplesview:
 
 .. figure:: _static/multiples.png
    :scale: 50%
@@ -137,12 +143,6 @@ Trees View
 ++++++++++
 
 
-.. figure:: _static/multiples.png
-   :scale: 50%
-   :alt: Subtypes view
-   :align: center
-
-   Distribution of Ambiguous Sequences in the Clade Phylogeny.
 
 For each clade phylogeny, this view compiles the number of times a :ref:`LCA` 
 was identified for an ambiguous sequence (after the :ref:`multiple_hits` stage). 
@@ -154,14 +154,18 @@ output archive available for download from the main page.
 Breakdown View
 ++++++++++++++
 
+Using user-friendly graphical Sunburst representation, this view
+summarizes the intricate structure of Symbiodinium clades and subtypes
+in a single or multi-sample view. Highlighting a level of the Sunburst
+charts display its structure and the percentage of sample reads
+assigned to it (See :ref:`sunburst`).
 
+
+.. _sunburst:
 
 .. figure:: _static/breakdown.png
    :scale: 50%
    :alt: Subtypes view
    :align: center
 
-Using user-friendly graphical Sunburst representation, 
-this view summarizes the intricate structure of Symbiodinium clades and subtypes 
-in a single or multi-sample view. Highlighting a level of the Sunburst charts display 
-its structure and the percentage of sample reads assigned to it.
+   Subtype Breakdown Vizualization
