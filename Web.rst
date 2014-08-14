@@ -142,12 +142,10 @@ The breakedown of subtypes for :ref:`resolved` under the "Resolved tab"
 Trees View
 ++++++++++
 
-
-
 For each clade phylogeny, this view compiles the number of times a :ref:`LCA` 
 was identified for an ambiguous sequence (after the :ref:`multiple_hits` stage). 
-The tree can be downloaded in the Newick format and viewed or parsed in phylogeny 
-applications. A matrix file comparing results across samples can be be found in 
+The tree can be downloaded in the Newick NHX format and viewed or parsed in phylogeny 
+applications (See :ref:`newick`). A matrix file comparing results across samples can be be found in 
 output archive available for download from the main page.
 
 

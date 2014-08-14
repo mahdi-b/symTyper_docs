@@ -361,8 +361,13 @@ Corrected Output Per Clade
 
 This file format is similar to that in :ref:`correctedAll` except that the `subtype` list represents the corrected (or effective), rather than initial, subtypes.
 
+.. _newick:
 
+Newick NHX Format
++++++++++++++++++
 
+NHX is based on the New Hampshire (NH) standard (also called "Newick tree format"). 
+Files in this format can be view using any application that supports it, such as the online treeview program (http://etetoolkit.org/treeview/).
 
-
+For more details on the NHX format, see: http://www.genetics.wustl.edu/eddy/forester/NHX.html 
 

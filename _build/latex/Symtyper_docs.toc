@@ -61,3 +61,4 @@
 \contentsline {subsection}{\numberline {3.5.1}Corrected Output All Clade}{17}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Resolved Output All Clades}{17}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Corrected Output Per Clade}{17}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Newick NHX Format}{18}{subsection.3.5.4}
